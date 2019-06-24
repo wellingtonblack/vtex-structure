@@ -1,0 +1,14 @@
+.imageComponent {
+    position: relative;
+    display: block;
+    width: 100%;
+    &.blur {
+        filter: blur(8px);
+    }
+    img {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

@@ -1,0 +1,16 @@
+.banners {
+    margin: 35px 0;
+    @include mobile {
+        display: none;
+    }
+    .banner {
+        margin-bottom: 20px;
+        display: block;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 72">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #100f0f;
+        opacity: 0.3;
+      }
+
+      .cls-1 {
+        font-size: 24px;
+        font-family: SegoeUI-Bold, Segoe UI;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+      }
+
+      .cls-2 {
+        fill: #fe264a;
+        font-size: 18px;
+      }
+
+      .cls-3 {
+        font-size: 54px;
+        font-family: SegoeUI, Segoe UI;
+      }
+    </style>
+  </defs>
+  <g id="teste-pagamento" transform="translate(-398 -1133)">
+    <text id="pagamento." class="cls-1" transform="translate(448 1180)"><tspan x="0" y="0">pagamento</tspan><tspan class="cls-2" y="0">.</tspan></text>
+    <text id="_3" data-name="3" class="cls-3" transform="translate(398 1191)"><tspan x="0" y="0">3</tspan></text>
+  </g>
+</svg>

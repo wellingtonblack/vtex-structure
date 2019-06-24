@@ -1,0 +1,27 @@
+.bannerWrapper {
+    @include wrapper;
+    margin-bottom: toPercentage($wrapper-global, 116);
+    .wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .imageWrapper{
+            width: toPercentage($wrapper-md, 550);
+            .banner {
+                background-size: 100%;
+                @include responsive-image(620, 550);
+            }
+        }
+        .wrapperShelf {
+            width: toPercentage($wrapper-md, 695);
+            padding-left: toPercentage($wrapper-md, 130);
+            @include tablet {
+                width: 100%;
+                background: $cw1;
+                border-radius: 20px;
+                overflow: hidden;
+                padding: toPercentage($wrapper-xs, 32);
+            }
+        }
+    }
+}

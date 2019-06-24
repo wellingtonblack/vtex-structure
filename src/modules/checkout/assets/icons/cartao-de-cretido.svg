@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="cartao-de-cretido" transform="translate(-302 -1152)">
+    <rect id="Retângulo_524" data-name="Retângulo 524" width="40" height="40" transform="translate(302 1152)" fill="none"/>
+    <g id="credit-card_3_" data-name="credit-card (3)" transform="translate(305 1116.497)">
+      <g id="Agrupar_2844" data-name="Agrupar 2844" transform="translate(0 43.503)">
+        <path id="Caminho_1406" data-name="Caminho 1406" d="M31,43.5H3a3.076,3.076,0,0,0-3,3v18a3.076,3.076,0,0,0,3,3H31a3.076,3.076,0,0,0,3-3v-18A3.076,3.076,0,0,0,31,43.5Zm-28,2H31a.945.945,0,0,1,1,1v1.6H2V46.5a.945.945,0,0,1,1-1Zm29,4.6v1.6H2V50.1ZM31,65.5H3a.945.945,0,0,1-1-1V53.7H32V64.5A.945.945,0,0,1,31,65.5Z" transform="translate(0 -43.503)"/>
+        <path id="Caminho_1407" data-name="Caminho 1407" d="M37.542,156.87h5.2a1,1,0,0,0,0-2h-5.2a1,1,0,0,0,0,2Z" transform="translate(-32.342 -142.07)"/>
+        <path id="Caminho_1408" data-name="Caminho 1408" d="M49.742,191.413h-12.2a1,1,0,0,0,0,2h12.2a1.071,1.071,0,0,0,1-1,.945.945,0,0,0-1-1Z" transform="translate(-32.342 -174.413)"/>
+      </g>
+    </g>
+  </g>
+</svg>

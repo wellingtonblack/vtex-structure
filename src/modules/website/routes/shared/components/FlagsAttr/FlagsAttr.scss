@@ -1,0 +1,80 @@
+.flagsWrapper {
+    position: absolute;
+    top: -6%;
+    right: -14%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    &.withoutspace {
+        position: absolute;
+        top: 0;
+        right: 0%;
+    }
+    .flagAttribute {
+        width: 53px;
+        height: 56px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: em(24);
+        line-height: em(40, 24);
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        margin-bottom: 14px;
+       
+        @include encode-b;
+       
+        &.presente {
+            background: #5795FF;
+            color: $cw1;
+            .icon {
+                width: 20.86px;
+                height: 20px;
+                margin-right: 15px;
+            }
+            &:hover {
+                width: 158px;
+            }
+        }
+        &.vegetariano {
+            background: #43DD16;
+            color: $cw1;
+            .icon {
+                width: 31.73px;
+                height: 24px;
+                margin-right: 10px;
+                margin-top: 5px;
+            }
+            &:hover {
+                width: 239px;
+            }
+        }
+        &.curti {
+            background: $cr1;
+            color: $cw1;
+            .icon {
+                width: 24.9px;
+                height: 22px;
+                margin-right: 14px;
+            }
+            &:hover {
+                width: 250px;
+            }
+        }
+        &>span {
+            display: block;
+            white-space: nowrap;
+            display: flex;
+            position: absolute;
+            right: 0;
+            .icon {
+                display: block;
+                margin-left: 30px;
+            }
+        }
+    }
+    @media screen and (max-width: 599px) {
+        right: 0%
+    }
+}

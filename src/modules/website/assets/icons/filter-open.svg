@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.88 21.352">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        stroke: #fff;
+      }
+    </style>
+  </defs>
+  <path id="filter-open" class="cls-1" d="M24.24-15.36H15.312v8.736H12.288V-15.36H3.36v-2.832h8.928v-8.784h3.024v8.784H24.24Z" transform="translate(-2.86 27.476)"/>
+</svg>

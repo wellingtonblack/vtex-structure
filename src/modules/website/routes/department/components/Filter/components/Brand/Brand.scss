@@ -1,0 +1,68 @@
+.brand {
+    margin-bottom: 40px;
+    width: toPercentage($wrapper-md, 160);
+    margin-right: toPercentage($wrapper-md, 79);
+    @include tablet {
+        width: toPercentage($wrapper-md, $wrapper-md);
+        margin-right: 0;
+    }
+    .title {
+        font-size: em(12);
+        line-height: em(24, 18);
+        padding-bottom: 15px;
+        margin-bottom: 27px;
+        @include encode-mb;
+        text-transform: uppercase;
+    }
+    .fieldSearch {
+        padding: 10px 27px;
+        font-size: em(14);
+        width: 100%;
+        border: 1px solid $cg14;
+        outline: none;
+        margin-bottom: 25px;
+    }
+    .listOfBrands {
+        height: auto;
+        overflow-y: scroll;
+        @include tablet {
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include scrollbar {
+            width: 5px;
+            background: $cg2;
+        }
+        @include scrollbar-thumb {
+            background: #707070;
+        }
+        .wrapperFilterItem {
+            .listFilter {
+                margin-right: 8px;
+                .filterItem {
+                    text-transform: uppercase;
+                    margin-bottom: 22px;
+                    @include tablet {
+                        width: 100px;
+                        /* height: 28px; */
+                        text-align: center;
+                        padding: 8px;
+                        background: $cp1;
+                    }
+                    .link {
+                        color: $cp1;
+                        font-size: em(12);
+                        line-height: em(25, 39);
+                        text-decoration: none;
+                        @include encode-r;
+                        @include tablet {
+                            color: $cw1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

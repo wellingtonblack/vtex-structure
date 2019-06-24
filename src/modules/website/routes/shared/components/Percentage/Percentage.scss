@@ -1,0 +1,14 @@
+.percentage {
+    position: absolute;
+    padding: 3px 16px;
+    border: 1px solid $cp1;
+    color: $cp1;
+    text-transform: lowercase;
+    text-align: center;
+    white-space: pre;
+    overflow: hidden;
+    top: 50px;
+    right: 7px;
+    @include encode-sb;
+    
+}

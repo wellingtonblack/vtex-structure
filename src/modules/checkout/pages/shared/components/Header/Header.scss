@@ -1,0 +1,24 @@
+.container {
+    @include wrapper;
+    .wrapper {
+        display: flex;
+        padding-top: 50px;
+        margin-bottom: 39px;
+        @include mobile {
+            padding-top: 26px;
+            margin-bottom: 34px;
+        }
+        .logoIcon {
+            width: 80px;
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+    @include tablet {
+        font-size: 80%;
+    }
+    @include mobile {
+        font-size: 100%;
+    }
+}

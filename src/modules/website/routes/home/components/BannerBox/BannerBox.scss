@@ -1,0 +1,134 @@
+.sectionBoxes {
+    margin-bottom: 60px;
+    width: toPercentage($wrapper-global, $wrapper-global);
+    .boxMiddle {
+        max-width: 1920px;
+        display: flex;
+        padding: 0 64px;
+        flex-flow: column wrap;
+        margin: 26px auto 0 auto;
+        height: 980px;
+        min-height: auto;
+        .banner {
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            @include mobile {
+                @include responsive-image(605, 375);
+            }
+        }
+        @media screen and (max-width: 1400px) {
+            height: 740px;
+        }
+        @include desktop-small {
+            height: 660px;
+        }
+        @media screen and(max-width:900px) {
+            height: 490px;
+        }
+        @include mobile {
+            height: 100%;
+            display: block;
+            padding: 0;
+        }
+         :global {
+            .slick-dots {
+                li {
+                    height: 2px;
+                    width: 37px;
+                    background: #b7b2b2;
+                    font-size: 0;
+                    display: inline-block;
+                    vertical-align: middle;
+                    button {
+                        padding: 0;
+                        &::before {
+                            content: "";
+                        }
+                    }
+                    &.slick-active {
+                        background: #c50e1f;
+                        height: 7px;
+                    }
+                }
+            }
+        }
+    }
+    .labelText {
+        @include encode-m;
+        font-size: em(11);
+        display: block;
+        width: 100%;
+        color: #999999;
+        background: #000;
+        text-align: right;
+        padding: 10px 12px;
+        margin: 0 auto;
+        margin-bottom: -1px;
+        text-transform: uppercase;
+        @include tablet {
+            text-align: left;
+        }
+    }
+     :global {
+        .bannerBox-0 {
+            margin-top: 22px;
+            @media screen and (min-width: 1280px) {
+                min-height: 300px
+            }
+        }
+        .bannerBox-1 {
+            @media screen and (min-width: 1280px) {
+                min-height: 280px
+            }
+        }
+        .bannerBox-2 {
+            @media screen and (min-width: 1280px) {
+                min-height: 500px
+            }
+        }
+        .bannerBox-3 {
+            margin-top: 52px;
+            @media screen and (min-width: 1280px) {
+                min-height: 280px
+            }
+        }
+        .bannerBox-4 {
+            @media screen and (min-width: 1280px) {
+                min-height: 280px
+            }
+        }
+        .bannerBox-5 {
+            margin-top: 27px;
+            @media screen and (min-width: 1280px) {
+                min-height: 600px
+            }
+        }
+    }
+    .padBox {
+        padding: 0 6.5px;
+        width: 25%;
+        @include mobile {
+            margin-top: 0;
+            padding: 0;
+        }
+         ::global {
+            .wrapperImage {
+                overflow: hidden;
+            }
+        }
+    }
+    img {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: ease-in-out .5s;
+        @media screen and (min-width: 992px) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

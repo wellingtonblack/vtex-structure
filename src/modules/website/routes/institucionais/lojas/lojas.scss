@@ -1,0 +1,101 @@
+:global {
+    // override
+    .institucional {
+        &.nossas-lojas {
+            main {
+                min-height: auto;
+                .section {
+                    .wrapper {
+                        .container {
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //fim override
+    #map {
+        float: left;
+        width: 57%;
+        height: 400px;
+        border: 3px solid #dcdcdc;
+        margin-right: 40px;
+    }
+    .nossas-lojas section.main {}
+    .nossas-lojas .content_lojas::-webkit-scrollbar {
+        width: 5px;
+        background-color: rgba(0, 0, 0, 0)
+    }
+    .nossas-lojas .content_lojas::-webkit-scrollbar-thumb {
+        background-color: rgba(76, 76, 76, 0.5);
+    }
+    .nossas-lojas .slimScrollRail {
+        background-color: rgba(255, 255, 255, 0)!important;
+    }
+    .nossas-lojas aside.menu-article {
+        display: none;
+    }
+    .nossas-lojas .select_lojas {
+        display: inline-block;
+        margin: 0px 10px 10px 0px;
+    }
+    .nossas-lojas .slimScrollDiv {
+        height: 313px !important;
+        margin-top: 15px;
+        width: 255px;
+        position: relative;
+        float: left;
+        margin-right: 100px;
+    }
+    .nossas-lojas .content_lojas {
+        overflow-y: scroll;
+        height: 313px;
+    }
+    .nossas-lojas h3 {
+        @include encode-sb;
+        font-size: 51px;
+        color: #2f2f2f;
+        margin-bottom: 10px;
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+    .texto-conteudo-central-atendimento {
+        margin: auto;
+        display: block;
+        @include tablet {
+            width: 100%;
+        }
+        .texto {
+            text-align: center;
+        }
+        select {
+            border: 1px solid #dfdfdf;
+            letter-spacing: 1px;
+            font-size: 11px;
+            padding: 8px 15px;
+            width: 100%;
+            margin: 0;
+            max-width: 100%;
+            resize: none;
+        }
+    }
+    .nossas-lojas p {
+        color: #4c4c4c !important;
+    }
+    .nossas-lojas .slimScrollDiv h4 {
+        @include encode-sb;
+    }
+    .nossas-lojas .lojas div {
+        margin-bottom: 50px;
+        min-height: 175px;
+    }
+    div#map {
+        display: none;
+    }
+    .hidden {
+        display: none;
+    }
+}

@@ -1,0 +1,41 @@
+.bannerWrapper {
+    // display: flex;
+    margin-bottom: 70px;
+    .bannerItem {
+        width: toPercentage($wrapper-global, $wrapper-global);
+        .banner {
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            @include responsive-image(868, 1600);
+            @include desktop-small {
+                @include responsive-image(868, 1600);
+            }
+            @include tablet {
+                @include responsive-image(868, 1600);
+            }
+            @include mobile {
+                @include responsive-image(605, 375);
+            }
+        }
+    }
+     :global {
+        .slick-prev,
+        .slick-next {
+            z-index: 2;
+            &::before {
+                display: none;
+            }
+            svg {
+                width: 20px;
+            }
+        }
+        .slick-next {
+            right: 50px;
+        }
+        .slick-prev {
+            left: 50px;
+        }
+    }
+}

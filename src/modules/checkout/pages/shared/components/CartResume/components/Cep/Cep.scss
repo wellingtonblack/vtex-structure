@@ -1,0 +1,27 @@
+.form {
+    .freteLabel {
+        font-size: em(14);
+        line-height: em(24, 14);
+        margin-bottom: 10px;
+        @include encode-b;
+    }
+
+    input {
+        padding: 21px;
+        width: 191px;
+        border: 1px solid #DCDCDC;
+        border-radius: 10px;
+    }
+
+    i {
+        margin-left: -7%;
+    }
+
+    .subtitle {
+        font-size: em(12);
+        margin-left: 22px;
+        color: $cg10;
+        text-decoration: none;
+        @include encode-r;
+    }
+}

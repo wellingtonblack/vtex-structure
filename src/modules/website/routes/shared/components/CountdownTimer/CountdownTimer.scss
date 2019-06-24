@@ -1,0 +1,32 @@
+.countDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 257px;
+    white-space: pre;
+    @include mobile {
+        width: 134px;
+        margin-right: toPercentage($wrapper-xs, 30);
+    }
+    .item {
+        color: $cw1;
+        font-size: em(64);
+        @include mobile {
+            font-size: em(40);
+        }
+        @include encode-b;
+        span {
+            color: $cy1;
+        }
+    }
+    .days {
+        width: 100%;
+        font-size: em(55);
+        margin-bottom: 6px;
+        text-align: center;
+        @include mobile {
+            font-size: em(31);
+        }
+    }
+}

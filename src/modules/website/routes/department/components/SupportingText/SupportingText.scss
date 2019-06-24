@@ -1,0 +1,26 @@
+.SupportingText {
+    @include wrapper;
+    @include tablet {
+        display: none;
+    }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        margin: toPercentage($wrapper-md, 41) 0;
+    }
+    .iconeWrapper {
+        width: toPercentage($wrapper-md, 105);
+        .icone {
+            background-size: 100%;
+            @include responsive-image(105, 105);
+        }
+    }
+    .textWrapper {
+        width: toPercentage($wrapper-md, $wrapper-md - 105);
+        padding-left: toPercentage($wrapper-md, 56);
+        font-size: em(14);
+        line-height: em(24, 14);
+        @include encode-m;
+    }
+    
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.436 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="filter-show" transform="translate(-26.964 -29)">
+    <g id="Group_2417" data-name="Group 2417" transform="translate(26.964 29)">
+      <path id="Path_1257" data-name="Path 1257" class="cls-1" d="M27.792,29c-.813,0-1.1.7-.526,1.276L33.9,36.915a.3.3,0,0,1,.027.062V42.7a.97.97,0,0,0,.264.638l3.537,3.537a.409.409,0,0,0,.7-.289V36.977a.343.343,0,0,1,.027-.063L45.1,30.276C45.674,29.7,45.386,29,44.57,29Z" transform="translate(-26.964 -29)"/>
+    </g>
+  </g>
+</svg>

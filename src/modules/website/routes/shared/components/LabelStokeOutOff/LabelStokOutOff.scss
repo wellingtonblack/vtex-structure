@@ -1,0 +1,11 @@
+.unavaible {
+    color: $cw1;
+    display: block;
+    background: $cp1;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    @include encode-b;
+    @include mobile {
+        font-size: em(14);
+    }
+}

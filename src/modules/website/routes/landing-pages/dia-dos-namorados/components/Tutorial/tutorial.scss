@@ -1,0 +1,87 @@
+.tutorial {
+    @include wrapper;
+    margin-bottom: 143px;
+    padding: 0px 22px;
+    @include mobile {
+        // padding: 0 30px;
+        margin-bottom: 80px;
+    }
+    img {
+        width: 100%
+    }
+    .title {
+        margin-bottom: 43px;
+        font-size: 0;
+        .icon {
+            display: block;
+            width: 518px;
+            margin: auto;
+            @include mobile {
+                width: auto;
+            }
+        }
+    }
+    .wrapper {
+        &.boxTutorials {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include mobile {
+                flex-direction: column;
+            }
+            .poster {
+                width: 33.333%;
+                margin-right: 15px;
+                @include mobile {
+                    margin-bottom: 40px;
+                    width: 100%;
+                    margin-right: 0;
+                }
+                .description {
+                    @include encode-m;
+                    font-size: em(20);
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding: 40px 0;
+                }
+                cursor: pointer;
+                &:hover {
+                    .boxCta {
+                        span {
+                            background: $cw1;
+                            color: $cp1;
+                        }
+                    }
+                }
+                &:last-child {
+                    margin: 0;
+                }
+                img {
+                    display: block;
+                    margin-bottom: 30px;
+                }
+                .boxCta {
+                    padding: 0 4%;
+                    span {
+                        @include encode-m;
+                        margin: auto;
+                        background: $cp1;
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                        border: 1px solid $cp1;
+                        max-width: 323px;
+                        color: $cw1;
+                        font-size: em(17);
+                        padding: 25px 0;
+                        text-transform: uppercase;
+                        transition: ease-in-out .2s;
+                        @include mobile {
+                            font-size: em(14);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

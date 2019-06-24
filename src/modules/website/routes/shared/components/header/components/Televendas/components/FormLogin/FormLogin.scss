@@ -1,0 +1,95 @@
+.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .mask {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, .5);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    .wrapper {
+        background: #FFF;
+        padding: 20px;
+    }
+    .form {
+        
+        h2 {
+            font-size: em(20);
+            padding: 20px 0;
+            @include encode-r;
+        }
+        .errortext {
+            font-size: em(12);
+            color: darkred;
+            margin-top: 4px;
+            @include encode-b;
+        }
+        .fieldset {
+            margin-bottom: 20px;
+            input, select {
+                width: 100%;
+                padding: 10px;
+                font-size: em(14);
+                color: $cp1;
+                @include placeholder {
+                    color: $cp1;
+                    font-size: em(14, 14);
+                }
+            }
+            &:last-child {
+                display: flex;
+                justify-content: flex-end;
+                button {
+                    background-color: #000;
+                    border: 0;
+                    color: white;
+                    padding: 10px 20px;
+                    font-size: em(16);
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+    .anonymousLogin {
+        
+        .title {
+            font-size: em(18);
+            text-align: center;
+            @include encode-r;
+            margin-bottom: 20px;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #000;
+            color: #FFF;
+            font-size: em(14);
+            cursor: pointer;
+            @include btn-accessibility;
+            @include encode-b;
+            &:first-child {
+                margin-right: 10px; 
+            }
+        }
+    }
+}

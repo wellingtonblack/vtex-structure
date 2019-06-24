@@ -1,0 +1,98 @@
+$wrapper: $wrapper-md - 550;
+.wrapperShelf {
+    width: 100%;
+    .slider {
+        width: 100%;
+    }
+     :global {
+        .slick-prev,
+        .slick-next {
+            width: 20px;
+            height: 20px;
+            z-index: 11;
+            &.slick-disabled {
+                display: none !important;
+            }
+        }
+        @include mobile {
+            .slick-next {
+                right: 0%!important;
+                margin-right: -10%;
+            }
+            .slick-prev {
+                left: 0%!important;
+                margin-left: -10%;
+            }
+        }
+        .slick-arrow {
+            &:before,
+            &:after,
+            {
+                content: none;
+            }
+        }
+        @include mobile {
+            .slick-next {
+                right: 10px;
+            }
+            .slick-prev {
+                left: 10px;
+            }
+        }
+        .slick-dots {
+            display: block;
+            bottom: inherit;
+            top: 0;
+            margin-top: -4%;
+            right: 0;
+            left: 0;
+            text-align: right;
+            @include mobile {
+                text-align: center;
+                bottom: 0;
+                top: initial;
+                margin-bottom: -1%;
+            }
+            li {
+                height: 10px;
+                width: 10px;
+                margin: 0 7px;
+                button {
+                    width: 10px;
+                    height: 10px;
+                    background: $cg7;
+                    border-radius: 100%;
+                    &:before,
+                    &:after {
+                        content: none;
+                    }
+                }
+                &.slick-active {
+                    button {
+                        background: $cp1;
+                    }
+                }
+            }
+        }
+    }
+    .prevArrow,
+    .nextArrow {
+        width: 100%;
+        display: block;
+    }
+    .cardItem {
+        width: toPercentage($wrapper, 254);
+    }
+    .title {
+        font-size: em(36);
+        line-height: em(40, 36);
+        text-transform: uppercase;
+        @include mobile {
+            font-size: em(24);
+        }
+        @include encode-b;
+        @include mobile {
+            text-align: center;
+        }
+    }
+}

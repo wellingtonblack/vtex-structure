@@ -1,0 +1,37 @@
+$wrapper: 175;
+.loginButton {
+    display: flex;
+    width: toPercentage($wrapper-md, $wrapper);
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    margin-left: toPercentage($wrapper-md, 34.33);
+    outline: none;
+    font-size: em(16);
+    
+    position: relative;
+    cursor: pointer;
+    .arrow {
+        width: toPercentage($wrapper, 17);
+        display: block;
+    }
+    .login {
+        width: toPercentage($wrapper, 32);
+        display: block;
+    }
+    span {
+        font-size: em(16);
+        @include encode-r;
+        &.name {
+            display: block;
+            text-transform: lowercase;
+            @include encode-b;
+        }
+    }
+    .dot {
+        color: $cr1;
+    }
+    
+}

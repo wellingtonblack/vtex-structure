@@ -1,0 +1,368 @@
+$height: 952;
+.miniCartComponent {
+    position: fixed;
+    width: 380px;
+    background: #FFF;
+    top: 0;
+    bottom: 0;
+    transform: translateX(490px);
+    box-shadow: 0 0 50px rgba(0, 0, 0, .1);
+    z-index: 99999;
+    transition: all 0.5s ease-in-out;
+    right: 0;
+    z-index: 4;
+    &.empty {
+        .scroller {
+            overflow-y: scroll;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            @include scrollbar {
+                width: 5px;
+                background: $cg2;
+            }
+            @include scrollbar-thumb {
+                background: #707070;
+            }
+            .wrapper2 {
+                height: auto;
+                overflow: visible;
+            }
+        }
+    }
+    &.inactive {
+        transform: translateX(490px);
+    }
+    &.active {
+        transform: translateX(0px);
+    }
+    @include tablet {
+        width: 100%;
+        overflow-y: scroll;
+        font-size: 95%;
+        z-index: 999;
+        &.inactive {
+            transform: translateX(100%);
+        }
+    }
+    .buttonClose {
+        width: 100%;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        color: $cp1;
+        text-transform: uppercase;
+        margin-right: 5px;
+        padding: 0px 0 30px 0;
+        @include encode-m;
+        font-size: em(11);
+        cursor: pointer;
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+    }
+    .wrapper1 {
+        height: toPercentageVh(952, 500);
+        padding: {
+            left: toPercentage(380, 20);
+            right: toPercentage(380, 20);
+            top: toPercentage(380, 18);
+            bottom: toPercentage(380, 8);
+        }
+        &.empty {
+            height: auto;
+        }
+        @include tablet {
+            height: 430px;
+            ;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .title {
+                font-size: em(12);
+                line-height: em(26, 28);
+                @include encode-m;
+                text-align: left;
+                text-transform: uppercase;
+                small {
+                    font-size: em(18, 28);
+                    line-height: em(26, 28);
+                }
+                span {
+                    color: $cr1;
+                }
+                @include tablet {
+                    margin-bottom: 20px;
+                    // border-bottom: 3px solid #F2F2F2;
+                    padding-bottom: 20px;
+                    position: relative;
+                    // &:after {
+                    //     content: "";
+                    //     width: 40%;
+                    //     height: 3px;
+                    //     position: absolute;
+                    //     left: 0;
+                    //     bottom: -3px;
+                    //     background: $cr1;
+                    // }
+                }
+            }
+            .items {
+                font-size: em(12);
+                line-height: em(24, 24);
+                @include encode-b;
+                text-transform: uppercase;
+                span {
+                    @include tablet {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .wrapperProducts {
+            height: calc(100% - 115px);
+            margin-top: 20px;
+            overflow-y: scroll;
+            @include tablet {
+                margin-top: 15px;
+                overflow-y: scroll;
+                height: 67%;
+            }
+            @include scrollbar {
+                width: 5px;
+                background: $cg2;
+            }
+            @include scrollbar-thumb {
+                background: #707070;
+            }
+            .productItem {
+                height: 280px;
+                display: flex;
+                margin-bottom: 39px;
+                overflow: hidden;
+                justify-content: space-between;
+                padding: 0 0px 0 20px;
+                @include tablet {
+                    height: auto;
+                }
+                .wrapperInformation {
+                    width: toPercentage(380, 190);
+                    margin-top: 50px;
+                }
+                .remove {
+                    width: toPercentage(380, 380);
+                    cursor: pointer;
+                    .iconRemove {
+                        @include encode-sb;
+                        text-transform: uppercase;
+                        color: #a3a3a3;
+                        font-size: em(9);
+                        display: flex;
+                        align-items: center;
+                        svg {
+                            width: 15px;
+                            height: 15px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                .image {
+                    width: toPercentage(380, 190);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    @include tablet {
+                        background-size: initial;
+                    }
+                }
+                .informations {
+                    // width: toPercentage(380, 135);
+                    .name {
+                        font-size: em(14);
+                        text-transform: uppercase;
+                        text-align: left;
+                        margin-bottom: 4px;
+                        line-height: 20px;
+                        margin-bottom: 40px;
+                        @include encode-sb;
+                        @include tablet {}
+                    }
+                    .oldPrice {
+                        font-size: em(12);
+                        color: #a3a3a3;
+                        min-height: 15px;
+                        text-transform: uppercase;
+                        @include encode-r;
+                    }
+                    .price {
+                        margin-bottom: 7px;
+                        text-align: left;
+                        display: flex;
+                        justify-content: flex-start;
+                        .number {
+                            color: $cp1;
+                            font-size: em(16);
+                            @include encode-b;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .quantity {
+                        display: flex;
+                        width: 112px;
+                        color: #a3a3a3;
+                        height: 29px;
+                        border: 1px solid $cg9;
+                        align-items: center;
+                        font-size: em(9);
+                        justify-content: center;
+                        margin-bottom: 30px;
+                        text-transform: uppercase;
+                        @include encode-sb;
+                        .add,
+                        .remove,
+                        .inputquantity {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            border: none;
+                            width: (100 / 3) * 1%;
+                            color: #a3a3a3;
+                            @include encode-b;
+                            @include placeholder {
+                                text-transform: uppercase;
+                                font-size: em(9);
+                            }
+                        }
+                        .add,
+                        .remove {
+                            cursor: pointer;
+                            @include encode-r;
+                            font-size: em(30)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wrapper2 {
+        background: $cw1;
+        width: 100%;
+        height: toPercentageVh(952, 433);
+        padding-bottom: toPercentage(380, 10);
+        overflow-y: scroll;
+        @include scrollbar {
+            width: 5px;
+            background: $cg2;
+        }
+        @include scrollbar-thumb {
+            background: #707070;
+        }
+        @include tablet {
+            height: auto;
+        }
+        .wrapperButtons {
+            padding: 0 toPercentage(380, 30);
+            margin-top: 23px;
+            .buttonBuyAgain,
+            .buttonEndOrder {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                overflow: hidden;
+                text-transform: uppercase;
+                @include encode-m;
+                letter-spacing: 1px;
+            }
+            .buttonBuyAgain {
+                padding: 20px 0;
+                margin-bottom: 5px;
+                color: $cp1;
+                font-size: em(10);
+                cursor: pointer;
+            }
+            .buttonEndOrder {
+                font-size: em(11);
+                background: #000;
+                color: #fff;
+                padding: 19px 0;
+            }
+        }
+    }
+    .emptyCart {
+        .banner {
+            max-width: 100%;
+            display: block;
+        }
+        .wrapperEmpty {
+            padding-left: 37px;
+            padding-right: 42px;
+            .label {
+                color: $cp1;
+                font-size: em(24);
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 71px;
+                @include encode-r;
+                span.bold {
+                    @include encode-b;
+                }
+                .btn {
+                    color: $cr1;
+                    font-size: em(14, 24);
+                    text-decoration: none;
+                }
+            }
+            .emptyTitle {
+                font-size: em(16);
+                margin-bottom: 20px;
+                @include encode-m;
+                text-transform: uppercase;
+            }
+            .emptySubTitle {
+                font-size: em(16);
+                margin-bottom: 24px;
+                @include encode-r;
+            }
+            .emptyButton {
+                padding: 13px 60px;
+                background: $cp1;
+                color: $cw1;
+                border: none;
+                text-decoration: none;
+                @include encode-r;
+                margin-bottom: 100px;
+                display: block;
+                width: 208px;
+            }
+        }
+    }
+}
+
+.mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    z-index: 3;
+    animation-duration: 1s;
+    @include cursorClose;
+}
+
+@include fadeIn;

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 116 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #100f0f;
+        font-size: 24px;
+      }
+
+      .cls-1, .cls-4 {
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-2 {
+        font-family: 'univers', sans-serif;
+    font-weight: 700;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fe264a;
+      }
+
+      .cls-4 {
+        font-size: 54px;
+      }
+    </style>
+  </defs>
+  <g id="meus-dados" transform="translate(-407 -173)">
+    <text id="meus_dados." data-name="meus
+dados." class="cls-1" transform="translate(448 209)"><tspan x="0" y="0">meus</tspan><tspan class="cls-2"><tspan x="0" y="24">dados</tspan><tspan class="cls-3" y="24">.</tspan></tspan></text>
+    <text id="_1" data-name="1" class="cls-4" transform="translate(407 231)"><tspan x="0" y="0">1</tspan></text>
+  </g>
+</svg>

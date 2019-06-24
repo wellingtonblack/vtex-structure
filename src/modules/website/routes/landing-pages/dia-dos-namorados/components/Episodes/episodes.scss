@@ -1,0 +1,179 @@
+.episodes {
+    margin-bottom: 90px;
+    @include wrapper;
+    .wrapper {
+        max-width: 1173px;
+        &.boxEpisodes {
+            padding: 0 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include mobile {
+                flex-direction: column;
+            }
+            .photo {
+                @include mobile {
+                    margin-bottom: 40px;
+                }
+                cursor: pointer;
+                &:hover {
+                    .boxCta {
+                        span {
+                            background: $cp1;
+                            color: $cw1;
+                        }
+                    }
+                }
+                margin-right: 15px;
+                &:last-child {
+                    margin: 0;
+                }
+                img {
+                    max-width: 100%;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+                .boxCta {
+                    padding: 0 8%;
+                    span {
+                        @include encode-m;
+                        margin: auto;
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                        border: 1px solid #000;
+                        max-width: 305px;
+                        color: #7f7f7f;
+                        font-size: em(20);
+                        padding: 15px 0;
+                        text-transform: uppercase;
+                        transition: ease-in-out .2s;
+                        @include mobile {
+                            color: $cp1;
+                            font-size: em(14);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+:global {
+    .actived {
+        background: $cp1;
+        color: $cw1!important;
+    }
+}
+
+.bio {
+    margin-bottom: 80px;
+    display: flex;
+    max-width: 1600px;
+    align-items: center;
+    @include mobile {
+        flex-direction: column;
+    }
+    img {
+        max-width: 100%;
+    }
+    .boxLeft {
+        width: toPercentage($wrapper-global, 886);
+        margin-right: toPercentage($wrapper-global, 50);
+        @include mobile {
+            width: toPercentage($wrapper-xs, $wrapper-xs);
+            margin: 0;
+        }
+    }
+    .boxRight {
+        width: toPercentage($wrapper-global, 440);
+        @include mobile {
+            width: toPercentage($wrapper-xs, 260);
+        }
+        .name {
+            margin: -10px 0 35px 0;
+            @include tablet {
+                margin: 30px 0 35px 0;
+            }
+        }
+        .text {
+            padding-left: toPercentage(500, 65);
+            @include mobile {
+                padding: 0;
+            }
+            h2 {
+                @include encode-sb;
+                margin-bottom: 20px;
+            }
+            p {
+                @include encode-m;
+                margin-bottom: 40px;
+                font-size: em(19);
+                text-align: justify;
+                line-height: 32px;
+                @include tablet {
+                    font-size: em(17);
+                    line-height: 27px;
+                }
+            }
+            .button {
+                max-width: 305px;
+                width: 100%;
+                margin: auto;
+                padding: 20px 40px;
+                background: $cp1;
+                text-align: center;
+                border: 1px solid $cp1;
+                transition: ease-in-out .2s;
+                cursor: pointer;
+                display: block;
+                @include tablet {
+                    max-width: 214px;
+                }
+                &:hover {
+                    background: $cw1;
+                    .cta {
+                        a {
+                            color: $cp1;
+                        }
+                    }
+                }
+                .cta {
+                    a {
+                        color: $cw1;
+                        @include encode-m;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: em(20);
+                        @include tablet {
+                            font-size: em(14);
+                        }
+                    }
+                }
+            }
+        }
+        .signature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+            @include tablet {
+                margin-top: 25px;
+            }
+            img {
+                margin: 0;
+            }
+        }
+    }
+    // specific customizations
+    &.emanunel {
+        .boxRight {
+            img {
+                margin: -10px 0 35px -65px;
+                @include mobile {
+                    margin: 30px 0 35px 0;
+                }
+            }
+        }
+    }
+}

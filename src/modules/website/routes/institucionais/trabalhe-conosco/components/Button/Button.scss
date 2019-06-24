@@ -1,0 +1,96 @@
+.subtitleWork {
+    @include encode-m;
+    text-align: center;
+}
+
+.wrapperWork {
+    @include wrapper;
+}
+
+.buttonWorkUs {
+    background-color: #000;
+    height: 50px;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    padding: 0 60px;
+    cursor: pointer;
+    @include encode-m;
+    margin: 30px auto;
+    display: block;
+}
+
+.buttonWorkUs a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.newsletter {
+    background: #1d1d1d;
+    @include wrapper;
+    .wrapper {
+        max-width: 1920px;
+        .wrapperForm {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 0;
+            @include mobile {
+                flex-direction: column;
+            }
+            .title {
+                @include encode-thin;
+                font-size: em(34);
+                color: #f3f3f2;
+                text-transform: uppercase;
+                margin-right: toPercentage($wrapper-md, 60);
+                @include mobile {
+                    margin-right: 0;
+                }
+            }
+            .subtitle {
+                width: toPercentage($wrapper-md, 270);
+                margin-right: toPercentage($wrapper-md, 47);
+                @include encode-r;
+                font-size: em(10);
+                color: #f3f3f2;
+                line-height: 17px;
+                @include mobile {
+                    width: toPercentage($wrapper-xs, $wrapper-xs);
+                    margin-right: 0;
+                    text-align: center;
+                    padding: 20px 0;
+                }
+            }
+            .formNews {
+                width: toPercentage($wrapper-md, 584);
+                display: flex;
+                @include mobile {
+                    width: toPercentage($wrapper-xs, $wrapper-xs);
+                }
+                .styleInput {
+                    width: toPercentage(584, 387);
+                    margin-right: toPercentage($wrapper-md, 10);
+                    background: #34372b;
+                    border: 1px solid #2b2d23;
+                    padding: 15px 0 15px 20px;
+                    color: #fff;
+                    outline: none;
+                }
+                .send {
+                    @include encode-b;
+                    font-size: em(10);
+                    width: toPercentage(584, 190);
+                    border: 0;
+                    background: $cw1;
+                    color: $cp1;
+                    padding: 17px 0;
+                    cursor: pointer;
+                    outline: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

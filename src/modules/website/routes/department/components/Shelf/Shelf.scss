@@ -1,0 +1,188 @@
+$wrapper: (($wrapper-md - 9 * 1) / 4) * 2;
+.prateleira {
+    width: toPercentage($wrapper-md, $wrapper);
+    margin-right: toPercentage($wrapper-md, 9);
+    height: 548px;
+    position: relative;
+    margin-bottom: toPercentage($wrapper-md, 39);
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+    @include desktop-small {
+        width: toPercentage($wrapper-md, (($wrapper-md - 9 * 1) / 3) * 2);
+    }
+    @include tablet {
+        width: 100%;
+        height: auto;
+    }
+    @media screen and (max-width: 599px) {
+        margin-bottom: toPercentage($wrapper-xs, 24);
+    }
+    &.full {
+        width: 100%;
+        height: auto;
+        .wrapperShelf {
+            height: 100%;
+            padding: toPercentage($wrapper-md, 40) 0;
+            :global {
+                .addToCart {
+                    display: flex;
+                }
+                .slick-dots {
+                    margin-top: -5%;
+                }
+            }
+        }
+    }
+    &:not(.full) {
+        .wrapperShelf {
+            @media screen and (min-width: 992px) {
+                :global {
+                    .slick-prev,
+                    .slick-next {
+                        margin-top: 31%;
+                        top: 0;
+                    }
+                }
+                &:hover {
+                    box-shadow: 0 10px 36px rgba(0, 0, 0, .1);
+                    height: 114%;
+                    :global {
+                        .addToCart {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wrapperShelf {
+        padding: toPercentage($wrapper, 24) 0;
+        border-radius: 20px;
+        background: $cw1;
+        height: 100%;
+        transition: all 0.5s ease-in-out;
+        border: 1px solid #F6F6F6;
+        @include tablet {
+            height: auto;
+        }
+        @media screen and (max-width: 599px) {
+            padding: toPercentage($wrapper-xs, 23) 0 toPercentage($wrapper-xs, 30) 0;
+            box-shadow: none;
+        }
+        .slider {
+            width: 100%;
+        }
+        :global {
+            .slick-prev,
+            .slick-next {
+                width: 40px;
+                height: 40px;
+                z-index: 11;
+                &.slick-disabled {
+                    display: none !important;
+                }
+            }
+            @include mobile {
+                .slick-next {
+                    right: 0% !important;
+                    margin-right: -10%;
+                }
+                .slick-prev {
+                    left: 0% !important;
+                    margin-left: -10%;
+                }
+            }
+            .slick-arrow {
+                &:before,
+                &:after,
+                    {
+                    content: none;
+                }
+            }
+            @include tablet {
+                .slick-next {
+                    right: 10px;
+                    margin-right: -2%;
+                }
+                .slick-prev {
+                    left: 10px;
+                    margin-left: -2%;
+                }
+            }
+            @include mobile {
+                .slick-next {
+                    right: 10px;
+                    margin-right: 0%;
+                }
+                .slick-prev {
+                    left: 10px;
+                    margin-left: 0%;
+                }
+            }
+            .slick-dots {
+                display: block;
+                bottom: inherit;
+                top: 0;
+                margin-top: -8%;
+                left: initial;
+                text-align: right;
+                right: 5%;
+                transition: all 0.5s ease-in-out;
+                li {
+                    height: 10px;
+                    width: 10px;
+                    margin: 0 7px;
+                    button {
+                        width: 10px;
+                        height: 10px;
+                        background: $cg7;
+                        border-radius: 100%;
+                        &:before,
+                        &:after {
+                            content: none;
+                        }
+                    }
+                    &.slick-active {
+                        button {
+                            background: $cr1;
+                        }
+                    }
+                }
+                @media screen and (max-width: 599px) {
+                    top: initial;
+                    bottom: -1%;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                }
+            }
+        }
+        .prevArrow,
+        .nextArrow {
+            width: 100%;
+            display: block;
+        }
+        .cardItem {
+            width: toPercentage($wrapper, 254);
+        }
+        &.full {
+            .title {
+                margin: 0 toPercentage($wrapper, 32);
+            }
+        }
+        .title {
+            font-size: em(24);
+            line-height: em(40, 24);
+            text-transform: lowercase;
+            display: block;
+            padding-bottom: 5px;
+            border-bottom: 1px solid $cg15;
+            margin: 0 toPercentage($wrapper, 44) 0 toPercentage($wrapper, 24);
+            @include encode-b;
+            @media screen and (max-width: 599px) {
+                border: none;
+                text-align: center;
+            }
+        }
+    }
+}

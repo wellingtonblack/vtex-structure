@@ -1,0 +1,11 @@
+.percentage {
+    color: $cp1;
+    font-size: em(14);
+    padding: 8px 15px;  
+    color: $cw1;
+    background: $cp1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include encode-r;
+}

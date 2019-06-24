@@ -1,0 +1,24 @@
+.cartMobile {
+    width: 74px;
+    padding: 0;
+    border: none;
+    display: block;
+    background: transparent;
+    margin-left: 31px;
+    position: relative;
+    .login {
+        width: 100%;
+        display: block;
+    }
+    .number {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        color: $cw1;
+        display: flex;
+        align-items: center;
+        font-size: em(16);
+        margin-left: 56%;
+        @include encode-sb;
+    }
+}

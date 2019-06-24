@@ -1,0 +1,142 @@
+.content {
+    margin-top: 54px;
+    position: relative;
+    @include wrapper();
+    @include tablet {
+        overflow: hidden;
+    }
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        @include tablet {
+            flex-direction: column;
+        }
+        .titleWrapper {
+            width: 100%;
+            .title {
+                width: 177px;
+                display: block;
+                margin-bottom: 55px;
+                @include tablet {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+
+    .cardSize {
+        width: toPercentage($wrapper-md, 385);
+        margin-right: 7px;
+        @include tablet {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &.last {
+            height: 100%;
+            margin-right: 0;
+            display: flex;
+            @include tablet {
+                margin-left: -3%;
+                margin-right: -3%;
+                width: 106%;
+                &.loading {
+                    @include responsive-image(185, 375);
+                }
+            }
+            .img {
+                background: #f8f7f3;
+                width: 100%;
+                position: relative;
+                @include responsive-image(506, 384);
+                @include tablet {
+                    padding: 20px 3%;
+                }
+                .contentcard {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: toPercentage(506, 40);
+                    flex-direction: column;
+                    @include tablet {
+                        position: relative;
+                        padding: 0;
+                    }
+                    .title {
+                        font-size: em(14);
+                        text-transform: uppercase;
+                        margin-bottom: 22px;
+                        @include encode-sb;
+                        @include tablet {
+                            display: none;
+                        }
+                    }
+
+                    .description {
+                        text-transform: uppercase;
+                        font-size: em(12);
+                        margin: 22px 0;
+                        line-height: em(24, 12);
+                        text-align: center;
+                        @include encode-r;
+                        @include tablet {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .callToAction {
+        padding: 20px 74px;
+        background: #000;
+        color: #FFF;
+        font-size: em(12);
+        border: none;
+        cursor: pointer;
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    .money {
+        font-size: em(28);
+        margin-bottom: 20px;
+        @include encode-l;
+    }
+
+    .button {
+        display: block;
+        width: 20px;
+        background: transparent;
+        border: none;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 20px;
+        outline: none;
+        cursor: pointer;
+
+        &.prev {
+            left: 20px;
+            right: initial;
+            transform: rotate(-180deg);
+        }
+
+        .icon {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+.loading {
+    @include loading();
+}

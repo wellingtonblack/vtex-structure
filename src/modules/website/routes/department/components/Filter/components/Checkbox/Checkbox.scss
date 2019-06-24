@@ -1,0 +1,32 @@
+.checkboxButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: em(12);
+    color: $cp1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    @include encode-m;
+    .checkbox {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        line-height: 21px;
+        text-align: center;
+        transition: all 0.5s;
+        border: 1.2px solid #333333;
+        &.active {
+            background: rgb(36, 35, 35);
+            box-shadow: none;
+        }
+    }
+    .chilldren {
+        // width: calc(100% - 31px);
+        line-height: em(18, 14);
+        &.active {
+            @include encode-b;
+        }
+    }
+}

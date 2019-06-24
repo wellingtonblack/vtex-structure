@@ -1,0 +1,70 @@
+$wrapper: $wrapper-global / 2;
+$wrapper-banner: 377;
+.bannerWrapper {
+    display: flex;
+    position: relative;
+    &>.wrapper {
+        width: 100%;
+    }
+    .bannerItem {
+        width: 100%;
+        .banner {
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            background-position: center;
+            @include responsive-image(375, 1920);
+            @include desktop-medium {
+                @include responsive-image(375, 1440);
+            }
+            @include desktop-small {
+                @include responsive-image(375, 1280);
+            }
+            @include tablet {
+                @include responsive-image(375, 992);
+            }
+            @include mobile {
+                @include responsive-image(693, 375);
+            }
+        }
+    }
+    .content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        @include wrapper;
+        @include tablet {
+            display: none;
+        }
+        .wrapper {
+            display: flex;
+            align-items: center;
+            h2 {
+                font-size: em(24);
+                @include encode-b;
+                margin-right: 54px;
+                color: $cp1;
+                &::after {
+                    content: ".";
+                    color: $cr1;
+                }
+            }
+            a {
+                width: 280px;
+                height: 50px;
+                background: $cr1;
+                color: #FFF;
+                text-decoration: none;
+                border-radius: 13px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                @include encode-b;
+            }
+        }
+    }
+}

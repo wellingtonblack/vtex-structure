@@ -1,0 +1,82 @@
+:global {
+    $slick-font-path: "/";
+    $slick-loader-path: "/";
+    @import "~slick-carousel/slick/slick.scss";
+    @import "~slick-carousel/slick/slick-theme.scss";
+    #root-empty-search {
+        @include wrapper();
+        .wrapper {
+            display: flex;
+            align-items: center;
+            margin: 58px 0;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #707070;
+            padding-bottom: 46px;
+            @include tablet {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            ;
+            #breadcrumb {
+                width: 100%;
+            }
+            .left {
+                width: toPercentage($wrapper-md, 679);
+                padding-left: toPercentage($wrapper-md, 120);
+                @include tablet {
+                    padding-left: 0;
+                }
+                ;
+                .title {
+                    font-size: em(36);
+                    line-height: em(40, 36);
+                    margin-bottom: 6px;
+                    @include encode-b;
+                }
+                .subtitle {
+                    font-size: em(24);
+                    line-height: em(40, 24);
+                    margin-bottom: 25px;
+                    @include encode-r;
+                }
+                .suggest {
+                    margin-bottom: 25px;
+                    .title-right-search {
+                        font-size: em(24);
+                        line-height: em(40, 24);
+                        margin-bottom: 31px;
+                        @include encode-b;
+                    }
+                    ul {
+                        margin-left: 32px;
+                    }
+                    li {
+                        font-size: em(16);
+                        line-height: em(42, 16);
+                        margin-bottom: 15px;
+                        @include encode-r;
+                    }
+                }
+            }
+            .right {
+                width: toPercentage($wrapper-md, $wrapper-md - 679);
+                img {
+                    width: toPercentage($wrapper-md - 679, 528);
+                }
+            }
+            @include tablet {
+                flex-direction: column;
+                .left,
+                .right {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            @include mobile {
+                font-size: 90%;
+            }
+        }
+    }
+}

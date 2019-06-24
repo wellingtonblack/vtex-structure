@@ -1,0 +1,32 @@
+.wrapper {
+    .title {
+        font-size: em(24);
+        line-height: em(24, 24);
+        @include encode-b;
+        margin-bottom: 24px;
+    }
+    .form {
+        input {
+            width: toPercentage(800 - 320, 218);
+            padding: 12px 25px;
+            border-radius: 10px;
+            background: #E8E8E8;
+            font-size: em(16);
+            color: $cp1;
+            border: none;
+        }
+        button {
+            border-radius: 10px;
+            width: toPercentage(800 - 320, 143);
+            padding: 12px 0;
+            background: $cp1;
+            font-size: em(16);
+            border: none;
+            color: $cw1;
+            margin-left: toPercentage(800- 320, 17);
+            cursor: pointer;
+            @include btn-accessibility;
+            @include encode-b;
+        }
+    }
+}

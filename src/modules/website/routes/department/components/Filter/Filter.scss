@@ -1,0 +1,169 @@
+.filterWrapper {
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    .wrappper {
+        display: flex;
+        justify-content: flex-start;
+        animation-duration: 0.5s;
+        position: relative;
+        @include wrapper;
+        @include tablet {
+            flex-direction: column;
+            background: #FFF;
+            position: relative;
+            z-index: 1;
+            padding: 40px 0 80px 0;
+        }
+        @include mobile {
+            width: 100%;
+        }
+        @media screen and (max-width: 599px) {
+            font-size: 80%;
+        }
+        .wrapperSpecification {
+            width: 100%;
+            background: $cw1;
+            position: relative;
+            z-index: 1;
+            @include tablet {
+                margin: 0;
+                // padding: 0 40px
+            }
+            .filtersRow {
+                display: flex;
+                justify-content: space-between;
+                @include tablet {
+                    flex-direction: column;
+                }
+            }
+            .filterDown {
+                margin-bottom: 28px;
+                justify-content: flex-end;
+                display: flex;
+                .filterButton {
+                    width: toPercentage($wrapper-md, 350);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @media screen and (max-width: 1280px) {
+                        width: toPercentage($wrapper-md, 600);
+                    }
+                    @include mobile {
+                        width: toPercentage($wrapper-xs, $wrapper-xs);
+                    }
+                }
+                .buttonClean {
+                    background: $cw1;
+                    height: 5vh;
+                    font-size: em(12);
+                    text-transform: uppercase;
+                    border: 0;
+                    border-bottom: 1px solid $cp1;
+                    outline: none;
+                    cursor: pointer;
+                    @include btn-accessibility;
+                    @include encode-b;
+                    .iconClear {
+                        width: 30.41px;
+                        height: 24.27px;
+                        display: block;
+                        margin-right: 11px;
+                    }
+                }
+            }
+            .boxSpecification {
+                width: toPercentage($wrapper-md, 360);
+                margin-right: toPercentage($wrapper-md, 96);
+                @include tablet {
+                    width: toPercentage($wrapper-md, $wrapper-md);
+                    margin-right: 0;
+                }
+            }
+             :global {
+                .box-1 {
+                    width: toPercentage($wrapper-md, 156);
+                    margin-right: toPercentage($wrapper-md, 51);
+                    order: 1;
+                    @include tablet {
+                        width: toPercentage($wrapper-md, $wrapper-md);
+                        margin-right: 0;
+                    }
+                }
+                .box-2 {
+                    h3.title {
+                        font-size: 0;
+                        &:before {
+                            content: "Cores e valores";
+                            font-size: em(12);
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .title {
+                font-size: em(12);
+                line-height: em(24, 18);
+                color: $cp1;
+                text-transform: uppercase;
+                padding-bottom: 15px;
+                margin-bottom: 17px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                @include encode-mb;
+            }
+            .listFilter {
+                margin-bottom: 38px;
+                display: flex;
+                flex-wrap: wrap;
+                max-height: 169px;
+                overflow-y: scroll;
+                &.inactive {
+                    display: none;
+                }
+                &.active {
+                    display: flex;
+                }
+                .item {
+                    width: 50%;
+                    margin-bottom: 29px;
+                    @include tablet {
+                        width: 33%;
+                    }
+                }
+                @include scrollbar {
+                    width: 5px;
+                    background: $cg2;
+                }
+                @include scrollbar-thumb {
+                    background: #707070;
+                }
+            }
+        }
+        .closeFilter {
+            color: $cw1;
+            font-size: em(12);
+            text-transform: uppercase;
+            width: 20vh;
+            height: 5vh;
+            background: $cp1;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 0;
+            .icon {
+                display: block;
+                width: 80%;
+                height: 45px;
+            }
+        }
+        @include tablet {
+            position: static;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.modelagem {
+    font-family: 'univers', sans-serif;
+    margin-top: 20px;
+    // padding: toPercentage($wrapper-global, 40) 0;
+    margin-bottom: 90px;
+    @include wrapper;
+    .wrapper {
+        max-width: 1920px;
+    }
+    @include mobile {
+        padding: 0;
+        margin-bottom: toPercentage($wrapper-global-xs, 92);
+    }
+    .title {
+        font-size: 0;
+        margin-bottom: 40px;
+        max-width: 380px;
+        width: 100%;
+        @include tablet {
+            margin-bottom: 10px;
+        }
+        @include mobile {
+            width: 77%;
+        }
+        span {
+            @include encode-b;
+        }
+    }
+    .contentDescription {
+        display: flex;
+        align-items: center;
+        @include tablet {
+            display: block;
+        }
+         :global {
+            .slick-arrow {
+                width: 34px;
+                top: 60px;
+                margin-top: 29%;
+                z-index: 2;
+            }
+            .slick-arrow::before {
+                content: none;
+            }
+            @include tablet {
+                .slick-list {
+                    margin: -10px;
+                }
+            }
+            .slick-arrow.slick-prev {
+                left: -10px;
+                background-image: url(/arquivos/left-arrow-black-vtr.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .slick-arrow.slick-next {
+                right: -10px;
+                background-image: url(/arquivos/right-arrow-black-vtr.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.paymentsContent {
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .boxTitle {
+        color: #b8b8b8;
+        @include encode-b;
+        font-size: em(11);
+        line-height: em(24, 14);
+        display: block;
+        margin-bottom: toPercentage($wrapper-md, 12);
+        text-transform: uppercase;
+        text-align: left;
+    }
+    .boxPayments {
+        width: toPercentage(338, 220);
+        @include desktop-small {
+            width: toPercentage(338, 338);
+        }
+        .boxItem {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            span {
+                width: 30px;
+                margin-right: toPercentage(338, 22);
+                margin-bottom: toPercentage(338, 7);
+            }
+            .iconVisa {
+                svg {
+                    width: toPercentage(338, 29);
+                    max-width: 35px;
+                    min-width: 35px;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .iconMasterCard {
+                svg {
+                    width: toPercentage(338, 33);
+                    max-width: 26px;
+                    min-width: 26px;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .iconAmericanExpress {
+                svg {
+                    width: toPercentage(338, 40);
+                    max-width: 20px;
+                    min-width: 20px;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .iconDinner {
+                svg {
+                    width: toPercentage(338, 36);
+                    max-width: 26px;
+                    min-width: 26px;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .iconElo {
+                svg {
+                    width: toPercentage(338, 35);
+                    max-width: 35px;
+                    min-width: 35px;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .iconDiscovery {
+                svg {
+                    width: toPercentage(338, 29);
+                    max-width: 24px;
+                    min-width: 24px;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .iconBoleto {
+                svg {
+                    width: toPercentage(338, 29);
+                    max-width: 24px;
+                    min-width: 24px;
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

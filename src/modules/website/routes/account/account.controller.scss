@@ -1,0 +1,126 @@
+:global {
+    .account {
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        span,
+        p {
+            @include encode-m;
+        }
+        main {
+            min-height: 0;
+        }
+        .profile-detail-display {
+            h4 {
+                @include encode-mb;
+                font-size: em(22);
+                margin-bottom: 30px;
+                letter-spacing: 1px;
+            }
+            h5 {
+                @include encode-sb;
+                font-size: em(14);
+                letter-spacing: 1px;
+            }
+            .profile-detail-display-email {
+                @include encode-m;
+                font-size: em(11);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            .edit-profile-link {
+                #edit-data-link {
+                    @include encode-mb;
+                    font-size: em(12);
+                    border-bottom: 1px solid $cp1;
+                    padding-bottom: 2px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: $cp1;
+                    margin-bottom: 20px;
+                    display: block;
+                    max-width: 135px;
+                }
+            }
+            .profile-detail-display-info {
+                span {
+                    @include encode-m;
+                    font-size: 11px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .address-display-block {
+            margin-top: 45px;
+            #exclude {
+                width: 50%;
+                @include mobile {
+                    width: 100%;
+                }
+                @include encode-m;
+                margin: 50px auto 0 auto;
+                padding: 0px 50px 50px 50px;
+                background-color: white;
+                @media screen and (max-width:500px) {
+                    padding: 0px 20px 50px 10px;
+                }
+            }
+            h4 {
+                @include encode-mb;
+                font-size: em(14);
+                letter-spacing: 1px;
+                margin-bottom: 15px;
+            }
+            .new-address-link {
+                a {
+                    @include encode-mb;
+                    font-size: em(12);
+                    border-bottom: 1px solid $cp1;
+                    padding-bottom: 2px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: $cp1;
+                    margin-bottom: 20px;
+                    display: block;
+                    max-width: 215px;
+                }
+            }
+            .edit-address-link {
+                margin-bottom: 30px;
+                #address-update,
+                .delete {
+                    @include encode-mb;
+                    font-size: em(12);
+                    border-bottom: 1px solid $cp1;
+                    padding-bottom: 2px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: $cp1;
+                    margin-bottom: 20px;
+                }
+            }
+            .address-display {
+                .address-display-unit {
+                    h5 {
+                        @include encode-mb;
+                        font-size: em(14);
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            .address-display-unit-info {
+                span {
+                    @include encode-m;
+                    font-size: 11px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

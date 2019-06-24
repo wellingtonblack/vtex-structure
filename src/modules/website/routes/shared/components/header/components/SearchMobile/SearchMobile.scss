@@ -1,0 +1,250 @@
+.formWrapper {
+    width: toPercentage($wrapper-xs, $wrapper-xs);
+    margin-right: toPercentage($wrapper-xs, 15);
+    position: relative;
+
+    .fieldSearch {
+        width: 100%;
+        border: 0;
+        color: $cw1;
+        font-size: em(12);
+        outline: none;
+        position: relative;
+        z-index: 2;
+        background: transparent;
+        position: relative;
+        border-bottom: 1px solid #ffffff;
+        text-transform: uppercase;
+        @include encode-m;
+
+        @include placeholder {
+            font-size: em(16);
+            color: $cw1;
+            @include encode-m;
+        }
+
+        @include tablet {
+            padding: 15px 5px;
+        }
+    }
+
+    &.active {
+        .fieldSearch {
+            z-index: 2;
+        }
+    }
+
+    .buttonsend {
+        position: absolute;
+        right: 0;
+        margin-right: toPercentage($wrapper-md, 20);
+        top: 0;
+        bottom: 0;
+        border: none;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        z-index: 2;
+        cursor: pointer;
+
+        .search {
+            svg {
+                width: 13px;
+                max-width: 13px;
+            }
+        }
+    }
+
+    .mask {
+        display: none;
+
+        &.active {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .6);
+            display: block;
+            z-index: 1;
+        }
+    }
+
+    @include fadeIn();
+
+    .wrapperlist {
+        width: 90%;
+        max-width: 1018px;
+        height: 500px;
+        background: $cw1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        animation-duration: 0.5s;
+        position: fixed;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        top: 130px;
+
+        @include tablet {
+            // top: initial;
+            // bottom: 10px;
+        }
+
+        @extend .fadeIn;
+
+        @include tablet {
+            @include wrapper;
+            height: 70vh;
+            width: 100%;
+            background: transparent;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .wrapper {
+            @media screen and (min-width: 992px) {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                padding: toPercentage(1018, 22) toPercentage(1018, 42);
+            }
+
+            @include tablet {
+                height: 100%;
+                overflow-y: scroll;
+                flex-direction: column;
+                background: $cw1;
+                padding: toPercentage($wrapper-xs, 23);
+            }
+
+            .listdepartment {
+                width: toPercentage(1018, 307);
+                padding-right: toPercentage(1018, 40);
+                margin: toPercentage(1018, 57) 0 toPercentage(1018, 83) 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-right: 1px solid $cg2;
+
+                @include tablet {
+                    width: 100%;
+                    margin: 0 0 toPercentage($wrapper-xs, 22) 0;
+                    padding: 0;
+                    border: none;
+                }
+
+                .item {
+                    margin-bottom: toPercentage(307, 20);
+
+                    .link {
+                        font-size: em(14);
+                        text-decoration: none;
+                        color: $cp1;
+                        line-height: em(18, 14);
+                        text-transform: lowercase;
+                        @include encode-r;
+
+                        span {
+                            @include encode-b;
+                        }
+                    }
+                }
+            }
+
+            $wrapper-products: 1018 - 307;
+
+            .listproducts {
+                width: toPercentage(1018, $wrapper-products);
+                height: 100%;
+                overflow-y: scroll;
+                padding-left: toPercentage(1018, 44);
+                height: auto;
+
+                @include tablet {
+                    width: 100%;
+                    padding-left: 0;
+                    overflow: visible;
+                }
+
+                .item {
+                    width: 100%;
+                    margin-bottom: toPercentage($wrapper-products, 11);
+
+                    .link {
+                        width: 100%;
+                        // margin-right: toPercentage($wrapper-products, (195 + 74));
+                        font-size: em(14);
+                        text-decoration: none;
+                        color: $cp1;
+                        line-height: em(18, 14);
+                        display: flex;
+                        align-items: center;
+                        @include encode-r;
+
+                        @include tablet {
+                            // width: toPercentage($wrapper-xs, 235);
+                            // padding: 0 toPercentage($wrapper-xs, 20);
+                            // margin: 0;
+                        }
+
+                        img {
+                            width: toPercentage($wrapper-products, 1018);
+                            margin-right: toPercentage($wrapper-products, 74);
+                            max-width: 80px;
+                        }
+                    }
+
+                    .target {
+                        width: toPercentage($wrapper-products, 76);
+                        font-size: em(18);
+                        color: $cp1;
+                        text-decoration: none;
+                        line-height: em(18, 18);
+                        @include encode-b;
+
+                        span {
+                            color: $cr1;
+                        }
+
+                        @include tablet {
+                            width: toPercentage($wrapper-xs, 80);
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .lastItem {
+                    margin-top: toPercentage($wrapper-products, 31);
+                }
+
+                @include scrollbar {
+                    width: 10px;
+                }
+
+                @include scrollbar-thumb {
+                    background: $cg2;
+                    border-radius: 10px;
+                }
+            }
+
+            .buttonSendForm {
+                background: $cp1;
+                color: $cw1;
+                font-size: em(16);
+                border: none;
+                padding: 18px 28px;
+                cursor: pointer;
+                display: block;
+                margin: 0 auto;
+                width: 220px;
+                @include encode-b;
+            }
+        }
+    }
+}

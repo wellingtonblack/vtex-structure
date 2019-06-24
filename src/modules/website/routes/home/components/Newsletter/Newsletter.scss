@@ -1,0 +1,94 @@
+.newsletter {
+    background: #2d2d2d;
+    @include wrapper;
+    .wrapper {
+        max-width: 1920px;
+        .wrapperForm {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 0;
+            @include mobile {
+                flex-direction: column;
+            }
+            .title {
+                @include encode-thin;
+                font-size: em(34);
+                color: #f3f3f2;
+                text-transform: uppercase;
+                margin-right: toPercentage($wrapper-md, 60);
+                @include mobile {
+                    margin-right: 0;
+                }
+            }
+            .subtitle {
+                width: toPercentage($wrapper-md, 270);
+                margin-right: toPercentage($wrapper-md, 47);
+                @include encode-r;
+                font-size: em(10);
+                color: #f3f3f2;
+                line-height: 17px;
+                @include mobile {
+                    width: toPercentage($wrapper-xs, $wrapper-xs);
+                    margin-right: 0;
+                    text-align: center;
+                    padding: 20px 0;
+                }
+            }
+            .formNews {
+                width: toPercentage($wrapper-md, 584);
+                display: flex;
+                @include mobile {
+                    width: toPercentage($wrapper-xs, $wrapper-xs);
+                }
+                .inputField {
+                    width: toPercentage(584, 387);
+                    margin-right: toPercentage($wrapper-md, 10);
+                    position: relative;
+                    p {
+                        position: absolute;
+                        bottom: -20px;
+                        color: $cw1;
+                        @include encode-r;
+                    }
+                    input.styleInput {
+                        width: 100%;
+                        background: $cp1;
+                        border: 1px solid #515151;
+                        padding: 15px 0 15px 20px;
+                        outline: none;
+                        color: #fff;
+                        @include encode-r;
+                        @include placeholder {
+                            color: #fff;
+                        }
+                    }
+                    .success {
+                        position: absolute;
+                        bottom: -22px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: em(12);
+                        @include encode-r;
+                        @include mobile {
+                            font-size: em(10);
+                            bottom: -19px;
+                        }
+                    }
+                }
+                .send {
+                    @include encode-b;
+                    font-size: em(10);
+                    width: toPercentage(584, 190);
+                    border: 0;
+                    background: $cw1;
+                    color: $cp1;
+                    padding: 17px 0;
+                    cursor: pointer;
+                    outline: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

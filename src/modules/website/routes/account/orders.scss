@@ -1,0 +1,150 @@
+:global {
+    body.orders {
+        text-transform: uppercase;
+        padding: 0;
+        // reset bootstratp
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        span,
+        p {
+            @include encode-m;
+        }
+        font-size: 100%;
+        h3,
+        ul,
+        .nav li {
+            margin: 0;
+            line-height: 0;
+        }
+        article {
+            border-radius: 0;
+        }
+        input[type="text"] {
+            height: auto;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+            margin: 0;
+        }
+        form {
+            margin: 0;
+        }
+        footer {
+            padding-top: 80px;
+        }
+        // styles
+        .page-header {
+            .title {
+                @include encode-mb;
+                color: $cp1;
+                font-size: em(22);
+            }
+            .nav-pills {
+                display: flex;
+                align-items: center;
+            }
+            .nav-pills>li.active>a,
+            .nav-pills>li.active>a:focus,
+            .nav-pills>li.active>a:hover {
+                color: $cw1;
+                background: $cp1;
+                border-radius: 0;
+                @include encode-b;
+                font-size: em(12);
+                padding: 15px 60px;
+                @media screen and (max-width: 600px) {
+                    padding: 5px 25px;
+                    font-size: em(10);
+                }
+            }
+            .nav-pills>li>a,
+            .nav-pills>li>a:focus,
+            .nav-pills>li>a:hover {
+                border-radius: 0;
+                @include encode-b;
+                font-size: em(12);
+                color: $cp1;
+                @media screen and (max-width: 600px) {
+                    font-size: em(10);
+                }
+            }
+        }
+        .ph4-ns {
+            background: #f4f4f4;
+        }
+        .mid-gray {
+            color: $cp1;
+            border-radius: 0;
+            &.ttu {
+                font-size: em(16);
+                @include encode-eb;
+            }
+            &.f5-l {
+                font-size: em(12);
+                @include encode-b
+            }
+        }
+        .bg-light-red {
+            background: #ab4343;
+            border-radius: 0;
+            padding: 2px 20px;
+        }
+        .myo-order-product {
+            h4 {
+                a {
+                    @include encode-b;
+                    color: $cp1;
+                }
+            }
+            p {
+                @include encode-m;
+                text-transform: capitalize;
+                font-size: em(12);
+                margin-bottom: 40px;
+            }
+            span {
+                text-transform: capitalize;
+                @include encode-b;
+                &.fw6 {
+                    @include encode-m;
+                }
+            }
+        }
+        .w-70-ns {
+            width: 50%;
+            @media screen and (max-width: 600px) {
+                width: 100%;
+            }
+        }
+        .w-30-ns {
+            width: 50%;
+            @media screen and (max-width: 600px) {
+                width: 100%;
+            }
+            display: flex;
+            align-items: flex-end;
+            @include tablet {
+                flex-direction: column;
+                align-items: initial;
+            }
+            .myo-reorder-btn {
+                svg {
+                    fill: $cp1;
+                }
+                span {
+                    color: $cp1;
+                }
+            }
+            .myo-details-btn {
+                background: $cp1;
+                color: $cw1;
+                border: 1px solid $cp1;
+            }
+        }
+    }
+}

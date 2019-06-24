@@ -1,0 +1,164 @@
+.card {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    width: toPercentage($wrapper-md, (($wrapper-md - 9 * 3) / 3));
+    height: auto;
+    margin-bottom: toPercentage($wrapper-md, 39);
+    margin-right: toPercentage($wrapper-md, 9);
+    @include desktop-small {
+        width: toPercentage($wrapper-md, (($wrapper-md - 9 * 3) / 3));
+    }
+    @include mobile {
+        margin-right: toPercentage($wrapper-xs, 8);
+        width: toPercentage($wrapper-xs, (($wrapper-xs - 8 * 2) / 2));
+    }
+    .loading.imageWrapper {
+        @include responsive-image(494, 382);
+    }
+    .wrapperCard {
+        width: 100%;
+        height: 100%;
+        .flag {
+            position: absolute;
+            margin-bottom: 20px;
+            height: 26px;
+            text-transform: lowercase;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+            top: 30px;
+            right: 0;
+            z-index: 1;
+            @include mobile {
+                display: none
+            }
+        }
+        .boxInformations {
+            .productName {
+                font-size: em(16);
+                line-height: em(20, 14);
+                color: $cp1;
+                text-transform: uppercase;
+                height: 50px;
+                overflow: hidden;
+                text-align: center;
+                @include encode-m;
+                max-width: 300px;
+                margin: 10px auto 0 auto;
+                min-height: 25px;
+                @include tablet {
+                    height: auto;
+                    min-height: 70px;
+                }
+                @include mobile {
+                    font-size: em(10);
+                    min-height: 30px;
+                }
+                @media screen and (max-width: 420px) {
+                    min-height: 45px;
+                }
+            }
+        }
+        .boxPrice {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            @include mobile {
+                height: 40px;
+            }
+            .bestPrice {
+                color: $cp1;
+                display: block;
+                @include encode-m;
+                font-size: em(14);
+                white-space: pre;
+                margin-bottom: 26px;
+                span {
+                    color: $cp1;
+                    display: inline-block;
+                    font-size: em(14, 14);
+                    padding: 6px 8px 6px 0px;
+                    background: $cp1;
+                    cursor: pointer;
+                    margin-left: 17px;
+                    @include encode-b;
+                }
+            }
+            .oldPrice {
+                font-size: em(14);
+                color: $cp1;
+                text-transform: uppercase;
+                height: 19px;
+                padding: 0 8px;
+                @include encode-m;
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                margin: auto;
+                margin-bottom: 2px;
+                color: #7f7f7f;
+                span {
+                    text-decoration: line-through;
+                    margin-left: 5px;
+                }
+                &.loading {
+                    width: 100%;
+                    max-width: 190px;
+                }
+                @include mobile {
+                    font-size: em(9);
+                }
+            }
+            .price {
+                font-size: em(21);
+                color: $cp1;
+                text-transform: uppercase;
+                padding: 0px 20px;
+                margin-bottom: 20px;
+                @include encode-b;
+                letter-spacing: 0;
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+                height: 25px;
+                &.loading {
+                    width: 100%;
+                    max-width: 190px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @include mobile {
+                    font-size: em(11);
+                }
+            }
+            .parcels {
+                min-height: 13px;
+                font-size: em(11);
+                text-align: center;
+                margin-top: 3px;
+                display: block;
+                color: $cp1;
+                margin-left: auto;
+                margin-right: auto;
+                @include encode-sb;
+                &.loading {
+                    width: 100%;
+                    max-width: 190px;
+                }
+            }
+        }
+    }
+    .ratting {
+        height: 25px;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+.loading {
+    @include loading;
+}

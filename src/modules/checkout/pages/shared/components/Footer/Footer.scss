@@ -1,0 +1,295 @@
+.container {
+    @include wrapper;
+    .featured {
+        color: $cr1;
+        @include encode-b;
+    }
+    .first {
+        display: flex;
+        align-items: center;
+        padding: 48px 0;
+        border: {
+            top: 5px solid $cg1;
+            bottom: 5px solid $cg1;
+        }
+        @include mobile {
+            flex-direction: column;
+        }
+        .parcels {
+            width: toPercentage($wrapper-md, 258);
+            font-size: em(16);
+            line-height: em(24, 16);
+            @include encode-r;
+        }
+        .iconsCard {
+            width: toPercentage($wrapper-md, 576);
+            .listOfPayments {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                .item {
+                    margin-right: toPercentage(576, 27);
+                    .icon {
+                        display: block;
+                    }
+                }
+                .visa {
+                    width: toPercentage(576, 43.52);
+                    max-width: 43.52px;
+                }
+                .mastercard {
+                    width: toPercentage(576, 49.52);
+                    max-width: 49.52px;
+                }
+                .american {
+                    width: toPercentage(576, 69.33);
+                    max-width: 69.33px;
+                }
+                .hipercard {
+                    width: toPercentage(576, 54.94);
+                    max-width: 54.94px;
+                }
+                .elo {
+                    width: toPercentage(576, 43.17);
+                    max-width: 43.17px;
+                }
+            }
+        }
+        .percentage {
+            width: toPercentage($wrapper-md, 363);
+            font-size: em(16);
+            line-height: em(24, 16);
+            padding-right: 20px;
+        }
+        .othersPayment {
+            width: toPercentage($wrapper-md, 105);
+            .listOfPayments {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                list-style: none;
+                .boleto {
+                    width: toPercentage(105, 44.48);
+                    margin-right: toPercentage(105, 33);
+                    max-width: 44.48px;
+                }
+                .transferencia {
+                    width: toPercentage(105, 28.37);
+                    max-width: 44.48px;
+                }
+            }
+        }
+        @include mobile {
+            .othersPayment,
+            .percentage,
+            .iconsCard,
+            .parcels {
+                width: 100%;
+                margin-right: 0;
+            }
+            &>div {
+                margin-bottom: 20px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .iconsCard {
+                .listOfPayments {
+                    .visa {
+                        width: toPercentage($wrapper-xs, 73.52);
+                        max-width: 73.52;
+                    }
+                    .mastercard {
+                        width: toPercentage($wrapper-xs, 79.52);
+                        max-width: 79.52;
+                    }
+                    .american {
+                        width: toPercentage($wrapper-xs, 99.33);
+                        max-width: 99.33;
+                    }
+                    .hipercard {
+                        width: toPercentage($wrapper-xs, 84.94);
+                        max-width: 84.94;
+                    }
+                    .elo {
+                        width: toPercentage($wrapper-xs, 73.17);
+                        max-width: 73.17;
+                    }
+                }
+            }
+            .othersPayment {
+                .listOfPayments {
+                    justify-content: flex-start;
+                    .boleto {
+                        margin-right: toPercentage($wrapper-xs, 33);
+                    }
+                }
+            }
+        }
+    }
+    .second {
+        display: flex;
+        padding: 33px 0;
+        border-bottom: 1px solid #E1E1E1;
+        @include mobile {
+            flex-direction: column;
+        }
+        .contacts {
+            width: toPercentage($wrapper-md, 627);
+            @include mobile {
+                width: 100%;
+            }
+            .label {
+                font-size: em(14);
+                @include encode-r;
+                color: $cp1;
+                margin-bottom: 6px;
+            }
+            .phoneNumber {
+                margin-bottom: 29px;
+                a {
+                    font-size: em(24);
+                    color: $cp1;
+                    text-decoration: none;
+                    @include encode-b;
+                }
+            }
+            .email {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .address {
+                @include mobile {
+                    margin-bottom: 29px;
+                }
+                a {
+                    font-size: em(14);
+                    color: $cp1;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: block;
+                    @include encode-b;
+                }
+            }
+            
+            .contactWrapper {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .iconPhone {
+                    width: 42.57px;
+                    display: block;
+                    margin-right: 20px;
+                }
+                .iconAddress {
+                    width: 42.57px;
+                    display: block;
+                    margin-right: 20px;
+                }
+            }
+        }
+        $certificates: $wrapper-md - 627;
+        .certificates {
+            width: toPercentage($wrapper-md, $certificates);
+            display: flex;
+            flex-direction: column;
+            @include mobile {
+                width: 100%;
+            }
+            .label {
+                font-size: em(14);
+                @include encode-b;
+                margin-bottom: 25px;
+            }
+            .lisOfCertificates {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                align-items: center;
+                @include mobile {
+                    flex-wrap: wrap;
+                }
+                .certificateText {
+                    font-size: em(12);
+                    @include mobile {
+                        width: 100%;
+                        br {
+                            display: none;
+                            text-align: center;
+                        }
+                    }
+                    strong {
+                        @include encode-b;
+                    }
+                }
+                .item {
+                    margin-right: toPercentage($certificates, 25);
+                }
+                .seloablec {
+                    width: toPercentage($certificates, 89.77);
+                    min-width: 89.77px;
+                }
+                .selolojaconfiavel {
+                    width: toPercentage($certificates, 66.5);
+                    min-width: 66.5px;
+                }
+                .selopci {
+                    width: toPercentage($certificates, 62.62);
+                    min-width: 62.62px;
+                }
+            }
+        }
+    }
+    .third {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        @include mobile {
+            flex-direction: column;
+        }
+        .copyright {
+            font-size: em(14);
+            @include encode-m;
+            @include mobile {
+                margin-bottom: 20px;
+            }
+        }
+        
+        .links {
+            font-size: em(14);
+            display: flex;
+            align-items: center;
+            @include encode-m;
+            @include mobile {
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+                .bar {
+                    clear: both;
+                }
+            }
+            a {
+                font-size: em(14, 14);
+                color: $cp1;
+                text-decoration: none;
+                cursor: pointer;
+                @include encode-m;
+            }
+            .bar {
+                margin: 0 20px;
+            }
+        }
+    }
+    @include tablet {
+        font-size: 80%;
+    }
+    @include mobile {
+        font-size: 100%;
+    }
+}

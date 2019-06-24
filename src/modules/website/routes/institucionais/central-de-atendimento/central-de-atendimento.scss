@@ -1,0 +1,15 @@
+:global {
+    .central-de-atendimento {
+        #NeoassistCentral {
+            width: 100%;
+            #neoassist {
+                .elCentralClient {
+                    height: 100vh;
+                    @include mobile {
+                        height: 1320px;
+                    }
+                }
+            }
+        }
+    }
+}

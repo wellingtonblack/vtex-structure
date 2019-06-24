@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+
+    .title {
+        min-height: 48px;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: em(22);
+        line-height: em(25, 22);
+        color: $cp1;
+        @include encode-l;
+
+        @include tablet {
+            font-size: em(16);
+            text-align: center;
+            min-height: 18px;
+        }
+
+        &.loading {
+            @include tablet {
+                width: 243px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .reference {
+        min-height: 10px;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: em(10);
+        margin-top: 5px;
+        color: $cp1;
+        @include encode-b;
+
+        @include tablet {
+            text-align: center;
+            font-size: em(10);
+        }
+
+        &.loading {
+            width: 80px;
+            @include tablet {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.loading {
+    @include loading;
+}

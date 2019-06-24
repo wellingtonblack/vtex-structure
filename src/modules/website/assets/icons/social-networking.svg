@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257.559 20">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: green;
+      }
+
+    </style>
+  </defs>
+  <g id="Group_1935" data-name="Group 1935" transform="translate(-858 -1586)">
+    <g id="pinterest-logo" transform="translate(1046 1586)">
+      <g id="Group_1924" data-name="Group 1924" transform="translate(54 0)">
+        <g id="Group_1923" data-name="Group 1923" transform="translate(0 0)">
+          <path id="Path_777" data-name="Path 777" class="cls-2" d="M69.467,5.561C68.921,1.609,64.982-.4,60.78.067a7.506,7.506,0,0,0-6.773,6.9c-.084,2.345.581,4.1,2.813,4.6.966-1.71-.311-2.084-.511-3.322-.819-5.062,5.84-8.52,9.327-4.982,2.415,2.45.824,9.982-3.066,9.2-3.726-.748,1.825-6.744-1.149-7.92C59,3.582,57.72,7.465,58.866,9.395c-.673,3.319-2.12,6.444-1.534,10.6,1.9-1.38,2.541-4.019,3.066-6.772.955.581,1.466,1.182,2.684,1.276C67.572,14.852,70.084,10.021,69.467,5.561Z" transform="translate(-54 0)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

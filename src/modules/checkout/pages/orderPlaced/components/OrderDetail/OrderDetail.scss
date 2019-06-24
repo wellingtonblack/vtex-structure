@@ -1,0 +1,133 @@
+.wrapper {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 5px solid $cg1;
+    h2 {
+        @include encode-b;
+        font-size: em(36);
+        margin-bottom: 28px;
+        @include mobile {
+            font-size: em(30);
+        }
+        small {
+            display: block;
+            margin-bottom: 5px;
+            font-size: em(16, 36);
+        }
+    }
+    .content {
+        display: flex;
+        @include tablet {
+            flex-direction: column;
+        }
+        .address {
+            list-style: none;
+            margin: 0;
+            li {
+                font-size: em(18);
+                line-height: em(32, 18);
+                @include encode-b;
+            }
+        }
+        .addressBox {
+            width: toPercentage($wrapper-md, 400);
+        }
+        .paymentBox {
+            width: toPercentage($wrapper-md, 500);
+        }
+        .totalBox {
+            width: toPercentage($wrapper-md, $wrapper-md - 900);
+        }
+        @include tablet {
+            .addressBox, .paymentBox, .totalBox {
+                width: 100%;
+            }
+            .addressBox, .paymentBox  {
+                border-bottom: 5px solid $cg1;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+            
+        }
+        @include mobile {
+            .addressBox, .paymentBox, .totalBox {
+                font-size: 90%;
+            }
+        }
+        .label {
+            font-size: em(18);
+            line-height: em(24, 18);
+            margin-bottom: 31px;
+            @include encode-b;
+        }
+        .labelPayment {
+            font-size: em(18);
+            line-height: em(24, 18);
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+            @include encode-b;
+            .icon {
+                width: 44px;
+                display: block;
+                margin-right: 20px;
+            }
+        }
+        .creditCardNumber {
+            font-size: em(18);
+            line-height: em(24, 18);
+            margin-bottom: 20px;
+            @include encode-b;
+        }
+        .value {
+            font-size: em(18);
+            line-height: em(24, 18);
+            display: flex;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            .labelParcels {
+                margin-right: 20px;
+                @include encode-b;
+            }
+            .labelPrice {
+                padding: 9px 25px;
+                background: $cr1;
+                color: #FFF;
+                @include encode-b;
+                display: block;
+                margin-right: 20px;
+            }
+        }
+        .listSubtotals {
+            margin: 0;
+            list-style: none;
+            .itemTotal {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                .valueTotal {
+                    @include encode-b;
+                }
+                .labelTotal {
+                    font-size: em(18);
+                    line-height: em(24, 18);
+                    @include encode-m;
+                }
+            }
+            .total {
+                &.itemTotal {
+                    .valueTotal {
+                        color: #FFF;
+                        padding: 9px 21px;
+                        background: $cr1;
+                        display: block;
+                    }
+                    .labelTotal {
+                        @include encode-b;
+                    }
+                }
+            }
+        }
+    }
+}

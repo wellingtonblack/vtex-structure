@@ -1,0 +1,112 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mobile {
+        flex-wrap: wrap;
+    }
+
+    .boxLink {
+        display: flex;
+        width: toPercentage($wrapper-md, 703);
+        margin-right: toPercentage($wrapper-md, 130);
+        justify-content: space-between;
+
+        @include mobile {
+            width: toPercentage($wrapper-xs, 175);
+            margin-right: toPercentage($wrapper-md, 37);
+            flex-direction: column;
+            padding: 0 0 toPercentage($wrapper-xs, 28) 0;
+            margin: 0;
+        }
+
+        .link {
+            @include mobile {
+                position: relative;
+                padding-bottom: toPercentage($wrapper-xs, 25)
+            }
+
+            span {
+                @include encode-b;
+                font-size: em(14);
+                line-height: em(24, 14);
+                color: white;
+                margin-bottom: 5px;
+                display: block;
+            }
+
+            .iconArrow {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: toPercentage($wrapper-xs, 30);
+                transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                max-width: 14px;
+
+                &.active {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        ul {
+            @include mobile {
+                width: toPercentage($wrapper-xs, 355);
+                text-align: left;
+
+                &.active {
+                    display: block;
+                    padding-left: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+
+            li {
+                a {
+                    @include encode-m;
+                    font-size: em(10);
+                    line-height: em(30, 10);
+                    color: #a3a3a3;
+                    text-decoration: none;
+                    cursor: pointer;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    @include mobile {
+                        font-size: em(11);
+                    }
+                }
+            }
+        }
+    }
+
+    .boxRight {
+        .socialNet {
+            padding: 5px 0 0 0;
+            @include mobile {
+                margin-bottom: 15px;
+            }
+        }
+
+        width: toPercentage($wrapper-md, 338);
+
+        @include mobile {
+            width: toPercentage($wrapper-xs, 170);
+        }
+    }
+
+    // .paymentSession {
+    //     width: toPercentage($wrapper-md, 130);
+    //     margin-right: toPercentage($wrapper-md, 68);
+    //     @include mobile{
+    //         width: toPercentage($wrapper-md, 130);
+    //     }
+    // }
+    .newsLetter {
+        width: toPercentage($wrapper-md, 190);
+    }
+}

@@ -1,0 +1,59 @@
+.content {
+    width: 626px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border: 1px solid #000;
+    z-index: 9999;
+    display: flex;
+    background: #FFF;
+    align-items: center;
+
+    @include mobile {
+        width: 100%;
+        z-index: 9999999;
+        border: none;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+        justify-content: space-between;
+    }
+
+    .logout {
+        font-size: em(16);
+        background: #000;
+        width: 100px;
+        padding: 10px;
+        color: #FFF;
+        border: none;
+        margin-left: 10px;
+        cursor: pointer;
+        @include btn-accessibility;
+
+        @include mobile {
+            width: 130px;
+            padding: 10px 30px;
+        }
+    }
+
+    .label {
+        font-size: em(16);
+        @include encode-r;
+
+        @include mobile {
+            font-size: 12px;
+        }
+
+        span {
+            font-size: em(20, 16);
+            @include encode-b;
+
+            @include mobile {
+                display: block;
+                font-size: 12px;
+                margin-top: 8px;
+            }
+        }
+    }
+}

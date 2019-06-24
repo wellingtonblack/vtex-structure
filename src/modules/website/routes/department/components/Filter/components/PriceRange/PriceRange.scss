@@ -1,0 +1,15 @@
+.priceRange {
+    width: toPercentage($wrapper-md, 351);
+    order: 2;
+    @include mobile {
+        margin: 0 auto 80px auto;
+        width: toPercentage($wrapper-xs, 300);
+    }
+    .title {
+        font-size: em(12);
+        padding-bottom: 15px;
+        margin-bottom: 40px;
+        @include encode-mb;
+        text-transform: uppercase;
+    }
+}

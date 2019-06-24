@@ -1,0 +1,43 @@
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    @include tablet {
+        justify-content: center;
+    }
+    .listpages {
+        display: flex;
+        .item {
+            cursor: pointer;
+            font-size: em(14);
+            margin-right: 34px;
+            color: #C7C7C7;
+            transition: all 0.5s ease-in-out;
+            @include encode-b;
+            &.active {
+                color: $cp1;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .controls {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        &.prev {
+            margin-right: 18px;
+        }
+        &.next {
+            margin-left: 18px;
+        }
+        .arrow {
+            width: 15px;
+            height: 15px;
+            display: block;
+        }
+    }
+}

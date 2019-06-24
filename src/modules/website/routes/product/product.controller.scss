@@ -1,0 +1,27 @@
+:global {
+    $slick-font-path: "/";
+    $slick-loader-path: "/";
+    @import "~slick-carousel/slick/slick.scss";
+    @import "~slick-carousel/slick/slick-theme.scss";
+    @mixin yv-wrapper {
+        width: toPercentage($wrapper-global, $wrapper-md + $offset-md);
+        @include desktop-large {
+            width: toPercentage($wrapper-global, $wrapper-md + $offset-md-large);
+        }
+        @include desktop-medium {
+            width: toPercentage($wrapper-global, $wrapper-md + $offset-md-medium);
+        }
+        @include tablet {
+            width: toPercentage($wrapper-global-xs, $wrapper-xs + $offset-sm);
+        }
+    }
+    
+}
+
+.seeToo {
+    width: 243px;
+    display: block;
+    @include mobile {
+        width: 200px;
+    }
+}

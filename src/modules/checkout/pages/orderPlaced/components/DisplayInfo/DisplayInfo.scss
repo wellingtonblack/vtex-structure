@@ -1,0 +1,179 @@
+.wrapper {
+    background: #00C853;
+    border-radius: 13px;
+    color: #FFF;
+    overflow: hidden;
+    margin-bottom: 33px;
+    .content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: toPercentage($wrapper-md, 76) toPercentage($wrapper-md, 64);
+        @include tablet {
+            flex-direction: column;
+        }
+        @include mobile {
+            font-size: 90%;
+        }
+        .wellcome {
+            width: toPercentage($wrapper-md, 896);
+            @include tablet {
+                width: 100%;
+            }
+            .title {
+                font-size: 100%;
+                margin-bottom: 27px;
+                display: flex;
+                align-items: center;
+                .iconArrow {
+                    width: 56px;
+                    display: block;
+                    margin-right: 31px;
+                    @include mobile {
+                        display: none;
+                    }
+                }
+                span {
+                    font-size: em(36);
+                    @include mobile {
+                        font-size: em(25);
+                        line-height: em(25, 20);
+                    }
+                    @include encode-b;
+                }
+            }
+            .subtitle {
+                font-size: em(14);
+                padding-bottom: 35px;
+                border-bottom: 1px solid #FFF;
+                display: inline-block;
+                @include encode-m;
+                margin-bottom: 40px;
+            }
+            .informations {
+                font-size: em(14);
+                margin-bottom: 12px;
+                @include encode-m;
+            }
+            .paymentInfo {
+                font-size: em(14);
+                margin-bottom: 12px;
+                @include encode-b;
+            }
+            .progressOrder {
+                font-size: em(14);
+                margin-bottom: 12px;
+            }
+        }
+        .value {
+            width: toPercentage($wrapper-md, $wrapper-md - 896);
+            @include tablet {
+                width: 100%;
+            }
+            .bulletInfo {
+                font-size: em(18);
+                margin-bottom: 12px;
+            }
+            .printInfo {
+                font-size: em(14);
+                margin-bottom: 25px;
+                @include encode-b;
+            }
+            .orderValue {
+                display: flex;
+                margin-bottom: 39px;
+                .label {
+                    line-height: em(24, 16);
+                    font-size: em(16);
+                    margin-right: 37px;
+                }
+                .number {
+                    @include encode-b;
+                    font-size: em(24);
+                    display: block;
+                    background: $cp1;
+                    padding: 11px;
+                }
+            }
+
+            .buttonPrint {
+                background: $cp1;
+                border-radius: 13px;
+                border: none;
+                color: #FFF;
+                text-decoration: none;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: em(18);
+                cursor: pointer;
+                justify-content: space-between;
+                padding: 0 31px;
+                @include encode-b;
+                .printIcon {
+                    width: 20px;
+                    display: block;
+                }
+                .arrowRightIcon {
+                    width: 10px;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: toPercentage($wrapper-md, 24) toPercentage($wrapper-md, 54);
+        align-items: center;
+        border-top: 1px solid #FFF;
+        @include tablet {
+            flex-direction: column;
+        }
+        .buttons {
+            display: flex;
+            @include tablet {
+                flex-direction: column;
+            }
+        }
+        .label {
+            font-size: em(18);
+            @include encode-b;
+            @include tablet {
+                margin: 20px 0;
+            }
+        }
+        @include tablet {
+            .controls {
+                width: 100%;
+            }
+        }
+        .callToAction {
+            width: 330.29px;
+            height: 70px;
+            border-radius: 10px;
+            background: #FE264A;
+            display: block;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: 25px;
+            padding: 0 31px;
+            text-decoration: none;
+            @include encode-b;
+            @include tablet {
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+            .arrowRightIcon {
+                width: 10px;
+                display: block;
+            }
+        }
+    }
+   
+}

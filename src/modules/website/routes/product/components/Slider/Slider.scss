@@ -1,0 +1,72 @@
+.wrapperSlider {
+
+    .sliderMain {
+        overflow: hidden;
+
+        .image {
+            position: relative;
+
+            img {
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+
+    .arrow {
+        width: 13px;
+        display: block;
+    }
+
+    :global {
+        .slick-prev, .slick-next {
+            width: 13px;
+            z-index: 10;
+            &>svg {
+                width: 100%;
+            }
+            &:after,&:before {
+                content: none;
+            }
+        }
+        .slick-next {
+            right: 20px !important;            
+        }
+        .slick-prev {
+            left: 20px !important;
+            transform: rotate(-180deg);
+        }
+    }
+
+    .sliderThumb {
+        @include tablet {
+            display: none;
+        }
+
+        .productImage {
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 58px !important;
+            cursor: pointer;
+        }
+    }
+
+    .buttonZoom {
+        position: absolute;
+        top: 46px;
+        right: 38px;
+        width: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        @include tablet {
+            display: none;
+        }
+
+        .icon {
+            width: 100%;
+            display: block;
+        }
+    }
+}

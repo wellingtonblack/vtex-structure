@@ -1,0 +1,20 @@
+//un-modified
+@function calc-em($target-px, $context) {
+    @return ($target-px / $context) * 1em;
+} // and modified to accept a base context variable
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+    @return ($pixels / $context) * 1em;
+}
+
+@function toPercentage($father, $children, $sinal: 1%) {
+    @return (($children * 100) / $father) * $sinal;
+}
+
+@function toPercentageVw($father, $children) {
+    @return (($children * 100) / $father) * 1vw;
+}
+
+@function toPercentageVh($father, $children) {
+    @return (($children * 100) / $father) * 1vh;
+}

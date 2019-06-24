@@ -1,0 +1,51 @@
+.label {
+    font-size: em(18);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    @include encode-b;
+    .icon {
+        width: 24px;
+        height: 24px;
+        display: block;
+    }
+}
+
+
+.wrapperForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .form {
+        input {
+            padding: 21px;
+            width: 136px;
+            border: 1px solid #DCDCDC;
+            border-radius: 10px;
+            @include encode-r;
+        }
+        i {
+            margin-left: -19px;
+            margin-top: 3px;
+        }
+        button {
+            padding: 12px 21px;
+            border-radius: 10px;
+            border: none;
+            color: #FFF;
+            background: #000;
+            margin-left: 10px;
+            font-size: em(12);
+            @include encode-b;
+        }
+    }
+    
+    .close {
+        font-size: em(18);
+        color: $cp1;
+        cursor: pointer;
+        @include encode-b;
+    }
+}
+

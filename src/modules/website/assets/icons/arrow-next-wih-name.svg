@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #100f0f;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 14px;
+        font-family: SegoeUI-Bold, Segoe UI;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="arrow-next-wih-name" transform="translate(-1106 -3787)">
+    <rect id="Rectangle_419" data-name="Rectangle 419" class="cls-1" width="124" height="30" rx="15" transform="translate(1230 3817) rotate(180)"/>
+    <path id="Path_1336" data-name="Path 1336" class="cls-2" d="M12.216,17.3V7.875l8.374,4.561Z" transform="translate(1193.783 3789.703)"/>
+    <text id="próxima" class="cls-3" transform="translate(1127 3807)"><tspan x="0" y="0">próxima</tspan></text>
+  </g>
+</svg>

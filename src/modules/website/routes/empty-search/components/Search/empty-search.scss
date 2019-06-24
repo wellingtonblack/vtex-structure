@@ -1,0 +1,256 @@
+.container {
+    @include wrapper;
+    .wrapper {
+        .title {
+            @include encode-b;
+            font-size: em(24);
+            text-transform: uppercase;
+            margin: 15px 0;
+            text-align: center;
+            line-height: 24px;
+            @include mobile {
+                font-size: em(16)
+            }
+        }
+        .subtitle {
+            @include encode-m;
+            font-size: em(24);
+            margin-bottom: 15px;
+            text-align: center;
+            @include mobile {
+                font-size: em(14)
+            }
+        }
+        .formWrapper {
+            width: toPercentage($wrapper-md, 550);
+            margin: auto;
+            position: relative;
+            @include mobile {
+                width: 100%;
+            }
+            .fieldSearch {
+                top: 0;
+                width: 100%;
+                border: 1px solid $cp1;
+                padding: 10px;
+                color: $cp1;
+                outline: none;
+                position: relative;
+                z-index: 2;
+                transition: .2s;
+                @include encode-m;
+                @include placeholder {
+                    font-size: em(16);
+                    text-transform: uppercase;
+                    color: #c1c1c1;
+                    @include encode-m;
+                }
+                @include tablet {
+                    padding: 18px;
+                }
+            }
+            &.active {
+                .fieldSearch {
+                    z-index: 2;
+                }
+            }
+            .buttonsend {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border-top: 1px solid $cp1;
+                border-left: 1px solid $cp1;
+                border-left: 0;
+                border-bottom: 1px solid $cp1;
+                background: #dedede;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                outline: none;
+                z-index: 2;
+                padding: 0 25px;
+                transition: .2s;
+                cursor: pointer;
+                .search {
+                    svg {
+                        width: 13px;
+                        min-width: 10px;
+                        margin-top: 2px;
+                    }
+                }
+            }
+            .mask {
+                display: none;
+                &.active {
+                    position: fixed;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: rgba(0, 0, 0, .6);
+                    display: block;
+                    z-index: 1;
+                }
+            }
+            @include fadeIn();
+            .wrapperlist {
+                width: 90%;
+                max-width: 1018px;
+                height: 500px;
+                background: $cw1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                animation-duration: 0.5s;
+                position: fixed;
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: flex;
+                top: 38%;
+                z-index: 12;
+                @include desktop-medium {
+                    height: 305px;
+                    top: 49%;
+                }
+                @include tablet {
+                    top: initial;
+                    // top: 10px;
+                }
+                @extend .fadeIn;
+                @include tablet {
+                    @include wrapper;
+                    margin-top: 10px;
+                    height: 50vh;
+                    width: 80%;
+                    background: transparent;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+                @include mobile {
+                    width: 100%;
+                }
+                .iconClose {
+                    display: block;
+                    width: 35px;
+                    height: 35px;
+                    position: absolute;
+                    right: -15px;
+                    cursor: pointer;
+                    top: -15px;
+                    @include mobile {
+                        right: 15px;
+                    }
+                }
+                .wrapper {
+                    @media screen and (min-width: 992px) {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        padding: toPercentage(1018, 22) toPercentage(1018, 42);
+                    }
+                    @include tablet {
+                        height: 100%;
+                        overflow-y: scroll;
+                        flex-direction: column;
+                        background: $cw1;
+                        padding: toPercentage($wrapper-xs, 23);
+                    }
+                    .listdepartment {
+                        width: toPercentage(1018, 307);
+                        padding-right: toPercentage(1018, 40);
+                        margin: toPercentage(1018, 57) 0 toPercentage(1018, 83) 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        border-right: 1px solid $cp1;
+                        @include tablet {
+                            width: 100%;
+                            margin: 0 0 toPercentage($wrapper-xs, 22) 0;
+                            padding: 0;
+                            border: none;
+                        }
+                        .item {
+                            margin-bottom: toPercentage(307, 20);
+                            .link {
+                                font-size: em(14);
+                                text-decoration: none;
+                                color: $cp1;
+                                line-height: em(18, 14);
+                                text-transform: lowercase;
+                                @include encode-r;
+                                span {
+                                    @include encode-b;
+                                }
+                            }
+                        }
+                    }
+                    $wrapper-products: 1018 - 307;
+                    .listproducts {
+                        width: toPercentage(1018, $wrapper-products);
+                        height: 100%;
+                        overflow-y: scroll;
+                        padding-left: toPercentage(1018, 44);
+                        height: auto;
+                        @include tablet {
+                            width: 100%;
+                            padding-left: 0;
+                            overflow: visible;
+                        }
+                        .item {
+                            width: 100%;
+                            margin-bottom: toPercentage($wrapper-products, 11);
+                            .link {
+                                width: 100%;
+                                // margin-right: toPercentage($wrapper-products, (195 + 74));
+                                font-size: em(14);
+                                text-decoration: none;
+                                color: $cp1;
+                                line-height: em(18, 14);
+                                display: flex;
+                                align-items: center;
+                                @include encode-r;
+                                @include tablet {
+                                    // padding: 0 toPercentage($wrapper-xs, 20);
+                                    margin: 0;
+                                }
+                                img {
+                                    width: toPercentage($wrapper-products, 90);
+                                    margin-right: toPercentage($wrapper-products, 74);
+                                    @include tablet {
+                                        width: toPercentage($wrapper-xs, 60);
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .lastItem {
+                            margin-top: toPercentage($wrapper-products, 31);
+                        }
+                        @include scrollbar {
+                            width: 10px;
+                        }
+                        @include scrollbar-thumb {
+                            background: $cp1;
+                            border-radius: 10px;
+                        }
+                    }
+                    .buttonSendForm {
+                        background: $cp1;
+                        color: $cw1;
+                        font-size: em(16);
+                        border: none;
+                        padding: 18px 28px;
+                        cursor: pointer;
+                        display: block;
+                        margin: 0 auto;
+                        width: 220px;
+                        @include encode-b;
+                    }
+                }
+            }
+        }
+    }
+}

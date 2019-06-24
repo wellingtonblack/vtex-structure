@@ -1,0 +1,70 @@
+.card {
+    .image {
+        position: relative;
+        &.loading {
+            @include responsive-image(506, 384);
+        }
+        margin-bottom: 20px;
+        .bar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            .icon {
+                width: 100%;
+                display: block;
+                svg {
+                    position: absolute;
+                    width: 10px;
+                    right: 0;
+                    bottom: 0;
+                    transform: rotate(90deg);
+                    width: 5px;
+                    right: 20px;
+                    top: 20px;
+                }
+            }
+            .selector {
+                width: 50%;
+                padding: 16px;
+                font-size: em(10);
+                background: #FFF;
+                border: 1px solid #e2e2e2;
+                @include encode-b;
+                -webkit-appearance: none;
+                &:before {
+                    content: "\003e";
+                    display: block
+                }
+            }
+        }
+    }
+    .informations {
+        margin-top: 20px;
+        .productName {
+            width: 100%;
+            min-height: 20px;
+            margin-bottom: 20px;
+            font-size: em(16);
+            text-transform: uppercase;
+            text-align: center;
+            @include encode-r;
+        }
+        .price {
+            width: 100%;
+            min-height: 25px;
+            display: block;
+            margin: 20px auto 0 auto;
+            font-size: em(18);
+            text-transform: uppercase;
+            text-align: center;
+            @include encode-m;
+            &.loading {
+                width: 80px;
+            }
+        }
+    }
+}
+
+.loading {
+    @include loading();
+}

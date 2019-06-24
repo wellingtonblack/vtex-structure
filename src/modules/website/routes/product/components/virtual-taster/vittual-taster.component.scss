@@ -1,0 +1,36 @@
+:global {
+    .virtual-taster-component {
+        margin-top: 35px;
+        #szb_bt_virtualfittingroom {
+            flex-flow: initial;
+            #szb_size_chart {
+                span {
+                    @media screen and (max-width: 414px) {
+                        left: 26px!important;
+                    }
+                    &:before {}
+                }
+            }
+            #szb_fitting_room {
+                span {
+                    @media screen and (max-width: 414px) {
+                        left: 80px!important;
+                    }
+                }
+            }
+        }
+        .sizebay-container #szb_fitting_room.icon>span:before,
+        .sizebay-container #szb_size_chart.icon>span:before {
+            top: initial!important;
+            left: -22px!important;
+        }
+        .sizebay-container #szb_fitting_room.button_plugin.link.icon,
+        .sizebay-container #szb_size_chart.button_plugin.link.icon {
+            padding: 0!important;
+            width: auto!important;
+            @include tablet {
+                width: 100%!important;
+            }
+        }
+    }
+}

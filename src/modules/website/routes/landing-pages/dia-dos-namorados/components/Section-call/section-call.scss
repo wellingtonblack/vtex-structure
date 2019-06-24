@@ -1,0 +1,93 @@
+.sectionCallTop {
+    margin-bottom: 80px;
+    display: flex;
+    @include mobile {
+        flex-direction: column;
+    }
+    .boxTitle {
+        width: toPercentage($wrapper-global, 1000);
+        @include mobile {
+            width: toPercentage($wrapper-xs, $wrapper-xs);
+            margin-bottom: 38px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .boxText {
+        width: toPercentage($wrapper-global, 600);
+        @include mobile {
+            width: toPercentage($wrapper-xs, $wrapper-xs);
+        }
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 5%;
+        @include tablet {
+            padding: 0 20px;
+        }
+        @include mobile {
+            padding: 0 60px 0 70px;
+        }
+        .text {
+            @include encode-r;
+            font-size: em(18);
+            white-space: pre-line;
+            width: toPercentage(600, 320);
+            line-height: 22px;
+            line-height: 25px;
+            span {
+                @include encode-sb;
+            }
+            @include desktop-small {
+                width: toPercentage(600, 320);
+            }
+            @include tablet {
+                width: toPercentage(600, 600);
+                text-align: justify;
+                font-size: em(14);
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.sectionCallBottom {
+    margin-bottom: 80px;
+    @include wrapper;
+    padding: toPercentage($wrapper-global, 0) 70px;
+    @include mobile {
+        padding: toPercentage($wrapper-global, 0) 13px;
+    }
+    .wrapper {
+        &.firstPhrase {
+            border-left: 7px solid #cab3b0;
+            padding: 30px 40px;
+            @include mobile {
+                padding: 20px 0 20px 25px;
+            }
+            .firstText {
+                @include encode-r;
+                font-size: em(15);
+                margin-bottom: 30px;
+                line-height: 25px;
+                @include mobile {
+                    font-size: em(14);
+                    line-height: 22px;
+                }
+            }
+            .secondText {
+                @include encode-sb;
+                font-size: em(18);
+                line-height: 30px;
+                @include mobile {
+                    font-size: em(16);
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}

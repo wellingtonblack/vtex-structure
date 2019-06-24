@@ -1,0 +1,27 @@
+.bannerTop {
+    .bannerWrapper {
+        display: flex;
+        @include mobile {
+            margin-bottom: 30px;
+        }
+        .bannerItem {
+            width: toPercentage($wrapper-global, $wrapper-global);
+            .banner {
+                width: 100%;
+                background-size: cover;
+                position: relative;
+                overflow: hidden;
+                @include responsive-image(400, 1200);
+                @include desktop-small {
+                    @include responsive-image(400, 1200);
+                }
+                @include tablet {
+                    @include responsive-image(427, 753);
+                }
+                @include mobile {
+                    @include responsive-image(427, 753);
+                }
+            }
+        }
+    }
+}

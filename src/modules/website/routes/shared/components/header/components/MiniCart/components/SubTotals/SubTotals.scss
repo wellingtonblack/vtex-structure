@@ -1,0 +1,83 @@
+.subtotals {
+    margin-top: 30px;
+    padding: 0 toPercentage(423, 33);
+    .subtotal {
+        display: block;
+        width: 100%;
+        margin-bottom: 60px;
+        .title {
+            font-size: em(14);
+            text-align: left;
+            margin-bottom: 16px;
+            @include encode-b;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: em(18);
+            margin-bottom: 20px;
+            .label {
+                @include encode-r;
+                text-transform: uppercase;
+            }
+            .total {
+                @include encode-b
+            }
+            .price {
+                @include encode-b;
+            }
+        }
+    }
+    .paymentAction {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        .title {
+            font-size: em(16);
+            @include encode-r;
+            margin-bottom: 10px;
+        }
+        .button {
+            width: 149px;
+            height: 48px;
+            padding: 0 25px;
+            border: 1px solid #E0E0E0;
+            background: #F6F6F6;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            outline: none;
+            .label {
+                font-size: em(16);
+                color: #707070;
+                @include encode-b;
+                cursor: pointer;
+            }
+            .buttonCalc {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: toPercentage(149, 78);
+                margin: 4px 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $cw1;
+                background: $cp1;
+                font-size: em(16);
+                transition: all 0.5s ease-in-out;
+                left: 0;
+                transform: translateX(0%);
+                @include encode-b;
+                &.active {
+                    transform: translateX(0%);
+                }
+                &.inactive {
+                    transform: translateX(80%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+:global {
+    $slick-font-path: "/";
+    $slick-loader-path: "/";
+    @import "~slick-carousel/slick/slick.scss";
+    @import "~slick-carousel/slick/slick-theme.scss";
+    #root-category-text {
+        @include wrapper;
+        padding: toPercentage($wrapper-md, 20) 0;
+        margin-bottom: 40px;
+        h1 {
+            text-transform: uppercase;
+            font-size: em(18);
+            line-height: em(24, 16);
+            margin-bottom: 20px;
+            @include encode-b;
+            @include tablet {
+                text-align: center;
+            }
+        }
+        h2 {
+            text-transform: uppercase;
+            font-size: em(16);
+            line-height: em(24, 16);
+            margin-bottom: 20px;
+            @include encode-b;
+            @include tablet {
+                text-align: center;
+            }
+        }
+        p {
+            font-size: em(14);
+            line-height: em(24, 14);
+            margin-bottom: 10px;
+            @include encode-m;
+            text-align: justify;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        span {
+            @include encode-b;
+        }
+        a {
+            color: $cp1;
+        }
+        @include tablet {
+            // display: none;
+        }
+    }
+    .lastSaw {
+        margin-top: -1px;
+        background: linear-gradient(to bottom, $cg13 1%, $cg13 90%, $cw1 90%, $cw1 100%);
+    }
+    .department-title {
+        &.wrapper {
+            @include wrapper;
+            padding: toPercentage($wrapper-md, 15)0 10px 0;
+            @include encode-b;
+            font-size: em(16);
+            text-transform: uppercase;
+        }
+    }
+}

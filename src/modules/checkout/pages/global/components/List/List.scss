@@ -1,0 +1,54 @@
+.list {
+    list-style: none;
+    margin-bottom: 13px;
+    margin-left: 0;
+    margin-right: 0;
+    max-height: 391px;
+    overflow-y: scroll;
+    @include scrollbar {
+        width: 5px;
+        background: transparent;
+    }
+    @include scrollbar-thumb {
+        background: #707070;
+    }
+    .item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 13px; 
+        color: $cp1;
+        padding: 8px 12px;
+        &:nth-child(odd) {
+            background: #F5F5F5;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .imagebox {
+            width: toPercentage(389, 137);
+            .image {
+                width: 62px;
+                height: 62px;
+                background-size: cover;
+                border-radius: 10px;
+            }
+        }
+        .info {
+            width: toPercentage(389, 132);
+            .name {
+                font-size: em(14);
+                margin-bottom: 14px;
+                @include encode-r;
+            }
+            .quantity {
+                font-size: em(18);
+                @include encode-b;
+            }
+        }
+        .total {
+            width: toPercentage(389, 120);
+            font-size: em(18);
+            @include encode-b;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$arrow-down-name: 'arrow-down';
+$arrow-down-x: 234px;
+$arrow-down-y: 0px;
+$arrow-down-offset-x: -234px;
+$arrow-down-offset-y: 0px;
+$arrow-down-width: 24px;
+$arrow-down-height: 24px;
+$arrow-down-total-width: 258px;
+$arrow-down-total-height: 164px;
+$arrow-down-image: '/arquivos/sprite-website.png';
+$arrow-down: (234px, 0px, -234px, 0px, 24px, 24px, 258px, 164px, '/arquivos/sprite-website.png', 'arrow-down', );
+$go-back-left-arrow-name: 'go-back-left-arrow';
+$go-back-left-arrow-x: 210px;
+$go-back-left-arrow-y: 24px;
+$go-back-left-arrow-offset-x: -210px;
+$go-back-left-arrow-offset-y: -24px;
+$go-back-left-arrow-width: 24px;
+$go-back-left-arrow-height: 24px;
+$go-back-left-arrow-total-width: 258px;
+$go-back-left-arrow-total-height: 164px;
+$go-back-left-arrow-image: '/arquivos/sprite-website.png';
+$go-back-left-arrow: (210px, 24px, -210px, -24px, 24px, 24px, 258px, 164px, '/arquivos/sprite-website.png', 'go-back-left-arrow', );
+$arrow-back-personal-name: 'arrow-back-personal';
+$arrow-back-personal-x: 167px;
+$arrow-back-personal-y: 48px;
+$arrow-back-personal-offset-x: -167px;
+$arrow-back-personal-offset-y: -48px;
+$arrow-back-personal-width: 43px;
+$arrow-back-personal-height: 43px;
+$arrow-back-personal-total-width: 258px;
+$arrow-back-personal-total-height: 164px;
+$arrow-back-personal-image: '/arquivos/sprite-website.png';
+$arrow-back-personal: (167px, 48px, -167px, -48px, 43px, 43px, 258px, 164px, '/arquivos/sprite-website.png', 'arrow-back-personal', );
+$close-navigation-name: 'close-navigation';
+$close-navigation-x: 124px;
+$close-navigation-y: 91px;
+$close-navigation-offset-x: -124px;
+$close-navigation-offset-y: -91px;
+$close-navigation-width: 43px;
+$close-navigation-height: 43px;
+$close-navigation-total-width: 258px;
+$close-navigation-total-height: 164px;
+$close-navigation-image: '/arquivos/sprite-website.png';
+$close-navigation: (124px, 91px, -124px, -91px, 43px, 43px, 258px, 164px, '/arquivos/sprite-website.png', 'close-navigation', );
+$arrow-prev-wih-name-name: 'arrow-prev-wih-name';
+$arrow-prev-wih-name-x: 0px;
+$arrow-prev-wih-name-y: 134px;
+$arrow-prev-wih-name-offset-x: 0px;
+$arrow-prev-wih-name-offset-y: -134px;
+$arrow-prev-wih-name-width: 124px;
+$arrow-prev-wih-name-height: 30px;
+$arrow-prev-wih-name-total-width: 258px;
+$arrow-prev-wih-name-total-height: 164px;
+$arrow-prev-wih-name-image: '/arquivos/sprite-website.png';
+$arrow-prev-wih-name: (0px, 134px, 0px, -134px, 124px, 30px, 258px, 164px, '/arquivos/sprite-website.png', 'arrow-prev-wih-name', );
+$spritesheet-width: 258px;
+$spritesheet-height: 164px;
+$spritesheet-image: '/arquivos/sprite-website.png';
+$spritesheet-sprites: ($arrow-down, $go-back-left-arrow, $arrow-back-personal, $close-navigation, $arrow-prev-wih-name, );
+$spritesheet: (258px, 164px, '/arquivos/sprite-website.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

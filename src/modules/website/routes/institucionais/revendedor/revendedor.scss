@@ -1,0 +1,42 @@
+:global {
+    .institucional {
+        &.seja-revendedor {
+            .section {
+                .wrapper {
+                    .container {
+                        .menu-article {
+                            display: none
+                        }
+                        .content-article {
+                            width: 100%;
+                            @include tablet {
+                                width: 100%;
+                                padding: 0 20px;
+                            }
+                            .content {
+                                h3 {
+                                    @include encode-m;
+                                    margin: 3% 0;
+                                    strong {
+                                        @include encode-sb;
+                                    }
+                                }
+                                .title-medium {
+                                    line-height: 30px;
+                                    @include encode-m;
+                                }
+                                img {
+                                    max-width: 100%;
+                                    @include mobile {
+                                        width: 100%;
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

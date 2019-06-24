@@ -1,0 +1,27 @@
+.social {
+    position: relative;
+    @include mobile {
+    }
+    .textSocial {
+        color: #b8b8b8;
+        @include encode-b;
+        font-size: em(11);
+        line-height: em(24, 14);
+        text-align: left;
+        margin-bottom: 10px;
+        display: block;
+        text-transform: uppercase;
+    }
+    .IconContent {
+        display: flex;
+        flex-wrap: wrap;
+        width: toPercentage(338, 338);
+        .IconSocial {
+            margin-right: 18px;
+            display: block;
+            margin-bottom: 15px;
+            width: 20px;
+        }
+
+    }
+}

@@ -1,0 +1,95 @@
+.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    z-index: 999;
+    @include tablet {
+        padding: 0 10px;
+    }
+    .mask {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, .5);
+        left: 0;
+        top: 0;
+        position: absolute;
+        @include cursorClose;
+        @include fade;
+        animation-duration: 0.5s;
+    }
+    .content {
+        width: 650px;
+        height: 480px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        padding: 50px 25px 50px 50px;
+        border-radius: 15px;
+        background-color: $cw1;
+        @include tablet {
+            width: 100%;
+            padding: 50px 5px 20px 20px;
+        }
+        @include fadeInDown;
+        animation-duration: 0.5s;
+        iframe {
+            width: 100%;
+        }
+        .closeModal {
+            display: block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            background: #000;
+            border-radius: 50%;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            @include scrollbar {
+                width: 10px;
+            }
+            @include scrollbar-thumb {
+                background: $cp1;
+                border-radius: 10px;
+            }
+            @include mobile {
+                width: 100%;
+                margin-bottom: 40px
+            }
+            .points {
+                margin-bottom: 40px;
+                .title {
+                    @include encode-b;
+                    font-size: em(14);
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                }
+                .adress {
+                    margin-bottom: 20px;
+                }
+                p {
+                    @include encode-m;
+                    font-size: em(12);
+                    margin-bottom: 8px;
+                }
+                .time {
+                    margin-bottom: 8px;
+                    @include encode-sb;
+                    font-size: em(12);
+                }
+            }
+        }
+    }
+}

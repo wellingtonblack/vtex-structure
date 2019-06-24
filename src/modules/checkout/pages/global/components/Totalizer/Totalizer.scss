@@ -1,0 +1,154 @@
+.list {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    border-bottom: 5px solid #E2E2E2;
+    border-top: 5px solid #E2E2E2;
+    padding-bottom: 29px;
+    padding-top: 20px;
+    margin-top: 13px;
+    .fisrtLine {
+        font-size: em(14);
+        margin-bottom: 21px;
+        @include encode-b;
+    }
+    .cupom {
+        margin-bottom: 36px;
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: em(18);
+        margin-bottom: 14px;
+        &:last-child {
+            margin: 0;
+        }
+        @include encode-r;
+        .value {
+            @include encode-b;
+        }
+    }
+}
+
+.wrapperTotalizers {
+    color: $cp1;
+}
+.totalList {
+    list-style: none;
+    margin: 0;
+    padding: 21px 0;
+    margin-bottom: 15px;
+    border-bottom: 5px solid #E2E2E2;
+    @include mobile {
+        border: none;
+        margin-bottom: 0;
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: em(18);
+        margin-bottom: 16px;
+        &:last-child {
+            margin: 0;
+        }
+        @include encode-b;
+        .value {
+            .total {
+                padding: 12px;
+                color: $cw1;
+                display: block;
+                font-size: em(24, 18);
+                background: $cr1;
+                @include encode-b;
+            }
+        }
+    }
+    
+    .itemParcels {
+        text-align: right;
+        padding-right: 30px;
+        font-size: em(18);
+        margin-bottom: 13px;
+        span {
+            @include encode-b;
+        }
+        @include encode-r;
+    }
+
+    .discountPrice {
+        font-size: em(18);
+        @include encode-b;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .tagDiscount {
+            display: flex;
+            align-items: center;
+            color: $cw1;
+            margin-left: 16px;
+            .priceDiscount {
+                padding: 8px 18px;
+                background: $cp1;
+            }
+            .percentage {
+                padding: 8px 18px;
+                background: $cr1;
+            }
+        }       
+    }
+}
+
+.header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+        font-size: em(24);
+        color: $cp1;
+        margin: 0;
+        @include encode-r;
+        .bold {
+            @include encode-b;
+        }
+        .featured {
+            color: $cr1;
+        }
+    }
+    .quantity {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: $cp1;
+        .number {
+            font-size: em(24);
+            @include encode-b;
+        }
+        .label {
+            font-size: em(24);
+            @include encode-r;
+        }
+    }
+}
+
+.warningMessage {
+    display: flex;
+    align-items: center;
+    margin: 80px 0;
+    font-size: em(14);
+    color: $cp1;
+    .warning {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin-right: 30px;
+    }
+    .text {
+        span {
+            @include encode-b;
+        }
+    }
+}

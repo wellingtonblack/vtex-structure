@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 54px;
+    @include tablet {
+        flex-direction: row;
+    }
+    .left {
+        width: toPercentage($wrapper-global, 1000);
+        @include tablet {
+            width: 100%;
+        }
+    }
+    .right {
+        width: toPercentage($wrapper-global, $wrapper-global - 1000);
+        padding-left: toPercentage($wrapper-global, 94);
+        padding-right: toPercentage($wrapper-global, 200);
+        padding-top: toPercentage($wrapper-global, 48);
+        @include tablet {
+            width: 100%;
+            padding: 0 toPercentage($wrapper-xs, 12);
+        }
+        .description {
+            margin-top: 20px;
+            font-size: em(12);
+            line-height: em(24, 12);
+            @include encode-r;
+            .text {
+                min-height: 17px;
+                margin-bottom: 5px;
+                width: 100%;
+                &.haf {
+                    width: 50%;
+                }
+                &.loading {
+                    @include loading();
+                }
+            }
+        }
+    }
+    .slider {
+        width: 100%;
+        @include tablet {
+            margin-bottom: 7px;
+        }
+        &.loading {
+            @include responsive-image(925, 1000);
+            @include mobile {
+                @include responsive-image(495, 375);
+            }
+            @include loading();
+        }
+    }
+}

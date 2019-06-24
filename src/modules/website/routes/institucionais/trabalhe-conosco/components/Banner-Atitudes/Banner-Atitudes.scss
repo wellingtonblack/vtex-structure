@@ -1,0 +1,34 @@
+.titleBannerLeft {
+    text-align: left;
+    margin: 25px;
+    @include encode-b;
+}
+
+.wrapperWork {
+    @include wrapper;
+}
+
+.bannerWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+    .bannerItem {
+        width: toPercentage($wrapper-global, $wrapper-global);
+        .banner {
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            @include responsive-image(396, 1584);
+            @include desktop-small {
+                @include responsive-image(396, 1584);
+            }
+            @include tablet {
+                @include responsive-image(205, 875);
+            }
+            @include mobile {
+                @include responsive-image(205, 875);
+            }
+        }
+    }
+}

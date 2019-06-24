@@ -1,0 +1,89 @@
+.footer {
+    .bgTop {
+        background-color: #1d1d1d;
+        @include wrapper;
+        .wrapper {
+            padding: toPercentage($wrapper-global, 35) 0;
+            max-width: 1920px;
+            @include mobile {
+                padding: toPercentage($wrapper-xs, 25) 0;
+            }
+        }
+    }
+    .copyright {
+        @include wrapper;
+        background-color: #161616;
+        @include mobile {
+            padding-bottom: 30px;
+        }
+        .wrapper {
+            padding: toPercentage($wrapper-global, 20) 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1920px;
+            @include tablet {
+                flex-direction: column;
+            }
+            @include mobile {
+                padding: 0;
+            }
+        }
+        .boxCopy {
+            width: toPercentage($wrapper-md, 870);
+            margin-right: toPercentage($wrapper-md, 83);
+            text-align: justify;
+            @include tablet {
+                width: toPercentage($wrapper-xs, 375);
+                margin-right: 0;
+                margin-bottom: toPercentage($wrapper-xs, 5);
+            }
+            @include mobile {
+                width: toPercentage($wrapper-xs, 355);
+            }
+            p {
+                @include encode-r;
+                font-size: em(9);
+                line-height: em(27, 12);
+                color: #8c8c8c;
+                text-transform: uppercase;
+            }
+        }
+        .boxMaster {
+            width: toPercentage($wrapper-md, 304);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include mobile {
+                width: toPercentage($wrapper-xs, 320);
+                svg {
+                    width: 65px;
+                }
+            }
+            .boxDevelopmentby {
+                width: toPercentage(304, 66);
+                display: flex;
+                flex-direction: column;
+                @include mobile {
+                    width: auto;
+                }
+                .iconDevelopmentBy {
+                    width: toPercentage(65, 65);
+                    display: block;
+                }
+            }
+            .boxPoweredBy {
+                width: toPercentage(304, 66);
+                display: flex;
+                flex-direction: column;
+                @include mobile {
+                    width: auto;
+                }
+                .iconPoweredBy {
+                    width: toPercentage(85, 85);
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.content {
+    @include wrapper();
+    @include tablet {
+        width: 100%;
+        overflow: hidden;
+    }
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        margin-bottom: 70px;
+        :global {
+            .slick-prev, .slick-next {
+                width: 7px;
+                z-index: 10;
+                &>svg {
+                    width: 100%;
+                }
+                &:after,&:before {
+                    content: none;
+                }
+            }
+            .slick-next {
+                right: -25px !important;
+                @include  mobile{
+                    right: 20px !important;
+                }            
+            }
+            .slick-prev {
+                left: -25px !important;
+                transform: rotate(-180deg);
+                @include  mobile{
+                    left: 20px !important;
+                } 
+            }
+        }
+        .wrapperTitle {
+            width: 100%;
+            margin-bottom: 49px;
+            @include tablet {
+                margin-bottom: 12px;
+            }
+        }
+        .cardItem {
+            width: toPercentage($wrapper-md, 387);  
+        }
+    
+        .slider {
+            width: 100%;
+        }
+    }
+  
+}

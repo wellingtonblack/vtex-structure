@@ -1,0 +1,150 @@
+.header {
+    position: relative;
+    z-index: 99;
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        top: -1px;
+    }
+    .seo {
+        font-size: 0;
+    }
+    .wrapperSearch {
+        position: relative;
+        z-index: 3;
+        background: $cw1;
+        @include wrapper;
+        .wrapper {
+            display: flex;
+            padding: 20px 0 16px 0;
+            align-items: baseline;
+            justify-content: space-between;
+            max-width: 1920px;
+            @include tablet {
+                align-items: center;
+                padding: toPercentage($wrapper-xs, 15) 0;
+            }
+            .search {
+                svg {
+                    width: 13px;
+                    max-width: 13px;
+                }
+            }
+        }
+        .logo {
+            width: toPercentage($wrapper-md, 230);
+            display: block;
+            min-width: 130px;
+            img {
+                max-width: 100%;
+            }
+            @include tablet {
+                display: none;
+            }
+        }
+        .navIcons {
+            width: toPercentage($wrapper-md, 145);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            @include desktop-medium {
+                width: toPercentage($wrapper-md, 180);
+            }
+            @include desktop-small {
+                width: toPercentage($wrapper-md, 200);
+            }
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+    .loginUser {
+        margin-right: toPercentage(140, 15);
+        z-index: 2;
+        @include tablet {
+            margin-right: 0px;
+        }
+        .iconUser {
+            width: 18px;
+            display: block;
+        }
+    }
+    .navigationMobile {
+        .navigationButton {
+            width: toPercentage($wrapper-xs, 25);
+            svg {
+                max-width: 17px;
+            }
+            .closemobile {
+                svg {
+                    max-width: 30px;
+                }
+            }
+        }
+        .navIconMob {
+            display: flex;
+            align-items: center;
+            width: toPercentage($wrapper-xs, 80);
+            justify-content: space-between;
+            max-width: 70px;
+        }
+    }
+    .searchMobile {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 1);
+        &.searchOpen {
+            transition: 500ms all ease-in;
+            top: 70px;
+        }
+        &.searchClosed {
+            top: 0;
+            transition: 500ms all ease-out;
+        }
+    }
+}
+
+// regua frete grátis pós header
+:global {
+    .rulerHome {
+        @include encode-sb;
+        font-size: em(10);
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 0;
+        letter-spacing: 4.9px;
+        &.desk {
+            @include tablet {
+                display: none;
+            }
+        }
+        &.mobile {
+            display: none;
+            @include tablet {
+                display: block;
+            }
+        }
+    }
+    #breadcrumb {
+        width: 100%;
+        margin: 10px 0;
+        @include tablet {
+            display: none;
+        }
+        li {
+            a {
+                text-decoration: none;
+                font-size: 0;
+                &:before {
+                    content: 'Home';
+                    text-transform: uppercase;
+                    color: #000;
+                    @include encode-m;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

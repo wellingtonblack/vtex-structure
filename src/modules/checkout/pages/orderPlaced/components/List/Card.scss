@@ -1,0 +1,43 @@
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    @include tablet {
+        padding-bottom: 20px;
+        border-bottom: 2px solid $cg1;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .image {
+        width: 120px;
+        img {
+            width: 100%;
+        }
+    }
+    .informations {
+        display: flex;
+        flex-direction: column;
+        max-width: 210px;
+        margin-left: 10px;
+    }
+    .name {
+        font-size: em(18);
+        @include encode-b;
+        margin-bottom: 19px;
+        small {
+            @include encode-r;
+            font-size: em(16, 18);
+            display: block;
+            margin-bottom: 3px;
+        }
+    }
+    .quantity {
+        display: flex;
+        justify-content: space-between;
+        span {
+            font-size: em(18);
+            @include encode-b;
+        }
+    }
+}

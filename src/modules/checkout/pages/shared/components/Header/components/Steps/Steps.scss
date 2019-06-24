@@ -1,0 +1,108 @@
+.container {
+    width: calc(100% - 100px);
+    border-bottom: 5px solid #F2F2F2;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include mobile {
+        width: 100%;
+        margin: 0;
+        border: none;
+        align-items: center;
+    }
+    .backMobile {
+        display: none;
+        @include mobile {
+            display: block;
+            background: transparent;
+            border: none;
+            margin-right: 20px;
+            .backIcon {
+                width: 24px;
+                display: block;
+            }
+        }
+    }
+    .list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        align-items: flex-end;
+        .item {
+            display: flex;
+            flex-direction: column;
+            @include encode-b;
+            font-size: em(28);
+            margin-right: 45px;
+            color: $cp1;
+            opacity: 0.2;
+            position: relative;
+            padding-bottom: 17px;
+            @include mobile {
+                display: none;
+                font-size: em(20);
+                line-height: em(20, 20);
+                padding: 0;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                height: 5px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: $cr1;
+                width: 0;
+                transition: all 0.5s ease-in-out;
+                margin: auto;
+            }
+            &.active {
+                opacity: 1;
+                @include mobile {
+                    display: flex;
+                    &::after {
+                        content: none;
+                    }
+                }
+                &::after {
+                    width: 100%;
+                }
+            }
+            small {
+                font-size: em(18, 28);
+                @include mobile {
+                    font-size: em(14);
+                    line-height: em(20, 14);
+                }
+            }
+            span {
+                @include encode-b;
+            }
+            .dot {
+                color: $cr1;
+            }
+        }
+    }
+    .selo {
+        display: flex;
+        align-items: center;
+        width: 150px;
+        font-size: em(14);
+        .icon {
+            width: 65px;
+            display: block;
+        }
+        @media screen and (max-width: 405px) {
+            width: auto;
+        }
+        .label {
+            line-height: em(15, 14);
+            margin-right: 20px;
+            @media screen and (max-width: 405px) {
+                display: none;
+            }
+        }
+    }
+}

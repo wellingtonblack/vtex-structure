@@ -1,0 +1,44 @@
+.input-range__label {
+    color: $cp1;
+    transform: translateZ(0);
+    white-space: nowrap;
+    @include encode-b;
+}
+
+.input-range__label--min,
+.input-range__label--max {
+    bottom: $input-range-label-position-bottom;
+    position: absolute;
+    display: none!important;
+}
+
+.input-range__label--min {
+    left: 0;
+}
+
+.input-range__label--max {
+    right: 0;
+}
+
+.input-range__label--value {
+    position: absolute;
+    top: $input-range-label-value-position-top;
+}
+
+.input-range__labelCurrentPrice {
+    font-size: em(14);
+    color: #838383;
+    display: block;
+    padding: 4px 9px;
+    @include encode-b;
+}
+
+.input-range__labelDefaultPrice {
+    font-size: em(18);
+    padding: 12px 18px;
+    background: $cp1;
+    color: $cw1;
+    display: block;
+    left: 0!important;
+    @include encode-b;
+}

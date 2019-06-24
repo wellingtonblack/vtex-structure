@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.934 23.403">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #100f0f;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g id="list-row" transform="translate(-1148.5 -1479.5)">
+    <path id="Path_1243" data-name="Path 1243" class="cls-1" d="M0,0H21.934" transform="translate(1150.5 1481.5)"/>
+    <path id="Path_1239" data-name="Path 1239" class="cls-1" d="M0,0H21.934" transform="translate(1150.5 1500.903)"/>
+    <path id="Path_1240" data-name="Path 1240" class="cls-1" d="M0,0H21.934" transform="translate(1150.5 1500.903)"/>
+    <path id="Path_1241" data-name="Path 1241" class="cls-1" d="M0,0H21.934" transform="translate(1150.5 1500.903)"/>
+    <path id="Path_1242" data-name="Path 1242" class="cls-1" d="M0,0H21.934" transform="translate(1150.5 1491.623)"/>
+  </g>
+</svg>

@@ -1,0 +1,95 @@
+$desktop: 1201px;
+$desktop-large: 1600px;
+$desktop-medium: 1440px;
+$desktop-small: 1280px;
+$tablet: 991px;
+$mobile: 767px;
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media screen and (max-width: $desktop-large) {
+        @content;
+    }
+}
+
+@mixin desktop-medium {
+    @media screen and (max-width: $desktop-medium) {
+        @content;
+    }
+}
+
+@mixin desktop-small {
+    @media screen and (max-width: $desktop-small) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+$wrapper-global: 1600;
+$wrapper-global-xs: 375;
+$wrapper-md: 1173;
+$wrapper-xs: 355;
+$offset-md: 120;
+$offset-sm: 0;
+$offset-xs: 0;
+$cg1: #F2F2F2;
+$cg2: #DBDBDB;
+$cg3: #767070;
+$cg4: rgba(112, 112, 112, 0.22);
+$cg5: #E8E8E8;
+$cg6: #888888;
+$cg7: #D3D1D1;
+$cg8: #a4a4a4;
+$cg9: #EFEFEF;
+$cg10: #707070;
+$cg11: #ADADAD;
+$cg12: #2e2e2e;
+$cg13: #F6F6F6;
+$cg14: #E2E2E2;
+$cg15: #C3C3C3;
+$cgr1: #25ac70;
+$cgr2: #B7EA67;
+$cgr3: #5EFF00;
+$cgr4: #00C853;
+$cr1: #c70615;
+$cr2: #CA1332;
+$cr4: #FE264A;
+$cr5: #F84E5A;
+$cr6: #F46361;
+$co1: #FF9100;
+$co2: #FC703C;
+$co3: #F46361;
+$cy1:#FFD500;
+$cy2: #FFE600;
+$cy3: #FFAA00;
+$cb1: #5795FF;
+$cb2: #0090FF;
+$cpu1: #8700FF;
+$cb0: #100F0F;
+$cb02: #585858;
+// aramis colors used
+$cp1: #100F0F;
+$cp2: #1c1c1c;
+$cp3: #404140;
+$cw1: #FFF;
+$cr3: #91151e;
+
+/* checkout */
+
+$wrapper-check-md: 1294;
+$wrapper-check-xs: 375;

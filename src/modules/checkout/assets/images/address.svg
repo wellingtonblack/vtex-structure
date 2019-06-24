@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 72">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #100f0f;
+        font-family: SegoeUI, Segoe UI;
+        opacity: 0.2;
+      }
+
+      .cls-1 {
+        font-size: 24px;
+      }
+
+      .cls-2 {
+        font-family: SegoeUI-Bold, Segoe UI;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        fill: #fe264a;
+      }
+
+      .cls-4 {
+        font-size: 54px;
+      }
+    </style>
+  </defs>
+  <g id="address" transform="translate(-398 -953)">
+    <text id="meus_endereços_e_tipo_de_entrega." data-name="meus endereços
+e tipo de entrega." class="cls-1" transform="translate(448 989)"><tspan x="0" y="0">meus endereços</tspan><tspan class="cls-2"><tspan x="0" y="24">e tipo de entrega</tspan><tspan class="cls-3" y="24">.</tspan></tspan></text>
+    <text id="_2" data-name="2" class="cls-4" transform="translate(398 1011)"><tspan x="0" y="0">2</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.051 77.051">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fe264a;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 0.5px;
+      }
+    </style>
+  </defs>
+  <g id="about-user-icon-active" transform="translate(-660 -442)">
+    <g id="Group_6" data-name="Group 6" transform="translate(660 442)">
+      <circle id="Oval_5_Copy_4" data-name="Oval 5 Copy 4" class="cls-1" cx="38.525" cy="38.525" r="38.525"/>
+    </g>
+    <g id="Group_2948" data-name="Group 2948" transform="translate(684 466)">
+      <path id="Path_25" data-name="Path 25" class="cls-2" d="M25.607,19.393a14.942,14.942,0,0,0-5.7-3.575,8.672,8.672,0,1,0-9.813,0A15.024,15.024,0,0,0,0,30H2.344a12.656,12.656,0,1,1,25.312,0H30A14.9,14.9,0,0,0,25.607,19.393ZM15,15a6.328,6.328,0,1,1,6.328-6.328A6.335,6.335,0,0,1,15,15Z" transform="translate(0)"/>
+    </g>
+  </g>
+</svg>

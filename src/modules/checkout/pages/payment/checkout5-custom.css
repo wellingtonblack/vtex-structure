@@ -1,0 +1,298 @@
+
+* {
+    text-transform: lowercase;
+}
+
+.CardForm .FormFieldLabel  {
+   margin-bottom: 10px; 
+}
+
+.PaymentCardCVV  label {
+    width: 100%;
+    display: block;
+    height: 13px;
+    margin: 0;
+}
+
+.CardForm input, .CardForm select {
+    background: #FFF;
+    padding: 11px 18px;
+    border: 1px solid #BFBFBF;
+    color: #BFBFBF;
+    font-size: 14px;
+    height: auto;
+    line-height: initial;
+    border-radius: 14px;
+    width: 100%!important;
+    box-sizing: border-box;
+    max-width: 100%!important;
+}
+
+.CardForm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 99.9%;
+}
+
+.CardForm > div:first-child, .PaymentLabel + div {
+    width: 100%!important;
+    margin-bottom: 5px;
+    order: -2;
+    margin-right: 0;
+}
+
+.CardForm > div:nth-child(3), .PaymentLabel ~ .PaymentInstallments + div, .SavedCards ~ .PaymentInstallments + div{
+    order: -1;
+    width: 100%;
+    display: flex;
+    margin-right: 0;
+}
+
+.CardForm > div {
+    width: calc(50% - 17.5px);
+    margin-bottom: 10px;
+    margin-right: 35px;
+}
+
+
+
+.PaymentInstallments  {
+    width: calc(50% - 17.5px)!important;
+    margin-bottom: 21px;
+    margin-right: 35px!important;
+    order: initial!important;
+    display: block!important;
+}
+
+
+.PaymentInstallments:before {
+    content: "";
+    display: block;
+    height: 30px;
+}
+
+.PaymentInstallments select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.BillingAddress  {
+    width: 100%!important;
+}
+
+.PaymentCardDueDate  label {
+    display: block;
+    float: none;
+    width: 100%;
+}
+
+.PaymentCardHolderName {
+    width: calc(50% - 17.5px);
+    margin-right: 35px;
+}
+
+.PaymentCardDueDate  {
+    width: calc(50% - 17.5px);
+}
+
+.PaymentCardValue  {
+    order: 1;
+    width: 100%;
+    
+}
+
+.PaymentCardValue .input-prepend {
+    width: calc(50% - 17.5px)!important;
+}
+
+.PaymentCardCVV span.error {
+    margin: 0;
+}
+.radio.card-flag-label > .card-flag-radio {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.PaymentCardNumber, .PaymentCardHolderDocument   {
+    width: calc(50% - 17.5px);
+}
+
+.PaymentCardDueDate  .payment-card-lash {
+    display: none;
+}
+
+.PaymentCardDueDate .input {
+    width: calc(50% - 10px);
+}
+
+.PaymentCardDueDate .payment-card-due-month {
+    margin-right: 20px;
+}
+
+.card-flag  {
+    opacity: 0.3;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-flag-radio:checked + .card-flag {
+    opacity: 1;
+}
+
+.PaymentCardDueDate label {
+    height: 20px;
+    box-sizing: border-box;
+}
+
+.PaymentCardCVV {
+    width: calc(50% - 17.5px);
+    display: block;
+    box-sizing: border-box;
+    clear: none!important;
+}
+
+.SecurityEnvironmentIcon {
+    display: none;
+}
+
+.ChangeNumberOfPayments  {
+    margin-bottom: 10px;
+}
+
+.ChangeNumberOfPayments  a {
+    width: 315px;
+    height: 50px;
+    background: #313131;
+    display: flex;
+    border-radius: 10px;
+    color: #FFFF;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'univers', sans-serif;
+    font-weight: 700;
+    box-shadow: 2px 2px 17px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+.AddressToggle {
+    padding-top: 30px;
+}
+.AddressToggle input {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.AddressToggle input:checked + label:before {
+    background: #FC3C53;
+}
+
+.AddressToggle label {
+    display: block;
+    width: 100%;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 31px;
+    padding-left: 30px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.AddressToggle label:before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    display: block;
+    background: #FFF;
+    border-radius: 100%;
+    margin-right: 15px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,.2);
+    margin-left: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.PostalCode  {
+    width: calc(50% - 17.5px);
+}
+
+.DontKnowPostalCode a {
+    color: #FC3C53;
+    font-family: 'univers', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.PaymentCardValue .FormFieldLabel  {
+    display: none!important;
+}
+
+.PaymentCardValue {
+    position: relative;
+}
+
+.PaymentCardValue .add-on {
+    position: absolute;
+    z-index: 9;
+    background: transparent;
+    border: none;
+    font-weight: 700;
+    top: 6px;
+    left: 10px;
+}
+
+
+.PaymentCardValue .card-value {
+    text-align: left;
+    padding-left: 40px
+}
+
+.PaymentCardValue .input-prepend {
+    width: 100%;
+}
+
+.BillingAddress  {
+    margin-right: 0!important;
+}
+
+@media screen and (max-width: 580px) {
+    .CardForm > div {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .PaymentCardHolderName {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .CardForm > div:nth-child(3), .PaymentLabel ~ .PaymentInstallments + div, .SavedCards ~ .PaymentInstallments + div {
+        flex-direction: column;
+    }
+
+    .PaymentCardDueDate, .PaymentCardValue {
+        width: 100%!important;
+    }
+
+    .PaymentInstallments  {
+        width: 100%!important;
+        margin-right: 0px!important;
+    }
+    .PaymentCardNumber, .PaymentCardHolderDocument   {
+        width: 100%;
+    }
+
+    .ChangeNumberOfPayments  a {
+        width: 100%;
+    }
+
+    .PaymentCardCVV {
+        min-width: 150px;
+    }
+}

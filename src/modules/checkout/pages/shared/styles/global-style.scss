@@ -1,0 +1,640 @@
+@function getText($number, $text1, $text2, $width, $height, $color) {
+    $dot: "<tspan x='0' y='24'>"+$text2+"</tspan><tspan class='cls-3' y='24'>.</tspan>";
+    $translate: "translate(407 231)";
+    @if($text2=="") {
+        $dot: "<tspan class='cls-3' y='0'>.</tspan>";
+        $translate: "translate(407 220)";
+    }
+    @return url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 "+$width+" "+$height+"'> <defs> <style> .cls-1 %7B fill: %23100f0f; font-size: 24px; %7D .cls-1, .cls-4 %7B font-family: 'univers', sans-serif; font-weight: 400; %7D .cls-2 %7B font-family: 'univers', sans-serif; font-weight: 700; %7D .cls-3, .cls-4 %7B fill: %23"+$color+"; %7D .cls-4 %7B font-size: 54px; %7D </style> </defs> <g id='meus-dados' transform='translate(-407 -173)'><text id='meus_dados.' data-name='meus%0Adados.' class='cls-1' transform='translate(448 209)'> <tspan x='0' y='0'>"+$text1+"</tspan> <tspan class='cls-2'> "+$dot+" </tspan> </text><text id='_1' data-name='1' class='cls-4' transform='"+$translate+"'> <tspan x='0' y='0'>"+$number+"</tspan> </text></g> </svg>%0A");
+}
+
+@mixin changeText($number,
+$text1,
+$text2,
+$width,
+$height,
+$color: "#000") {
+    div.accordion-heading {
+        &>span.accordion-toggle {
+            &:before {
+                content: getText($number, $text1, $text2, $width, $height, $color);
+                display: block;
+                width: $width * 1px;
+                @content;
+            }
+            &>span {
+                font-size: 0;
+            }
+        }
+    }
+}
+
+@mixin icon($path) {
+    &:after {
+        content: url($path);
+        display: block;
+        position: absolute;
+        left: -58px;
+        top: 25px;
+        @include mobile {
+            display: none;
+        }
+        @content;
+    }
+}
+
+:global {
+    @import url('https://fonts.googleapis.com/css?family=Encode+Sans:100,200,300,400,500,600,700,800,900');
+    * {
+        text-transform: lowercase;
+    }
+    p,
+    span,
+    div,
+    em,
+    a,
+        {
+        @include encode-r;
+    }
+    .link-logout,
+    .icon-edit,
+    .link-payment-discounts-cod {
+        &,
+        &:active,
+        &:hover,
+        &:focus {
+            color: $cr1;
+            text-decoration: none;
+        }
+    }
+    .steps-view {
+        width: 100% !important;
+        padding: 0;
+    }
+    .container {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        max-width: 1294px;
+        padding: 0 20px;
+        @include mobile {
+            padding: 0px 0px;
+        }
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .row-fluid .mini-cart {
+        width: 30%!important;
+        @include tablet {
+            width: 100%!important;
+        }
+    }
+    html {
+        body {
+            font-size: 100%;
+            @include desktop-small {
+                font-size: 80%;
+            }
+            @include tablet {
+                font-size: 100%;
+            }
+        }
+        .body-cart {
+            padding: 0 !important;
+        }
+        label,
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        .btn,
+        .btn-group>.btn {
+            font-size: initial;
+        }
+    }
+    #header,
+    #footer,
+    .paymentmobile,
+    .selos {
+        display: none;
+    }
+    .container {
+        &>h1 {
+            display: none !important;
+        }
+    }
+    .mini-cart {
+        position: sticky;
+        top: 0;
+        @include tablet {
+            margin-top: 30px;
+            position: relative;
+            z-index: 9;
+        }
+    }
+    ; // RESET GRID VTEX AND STYLES
+    #go-to-cart-button {
+        display: none;
+    }
+    .container-main {
+        max-width: 100%!important;
+        width: toPercentage($wrapper-global, $wrapper-md + $offset-md)!important;
+        padding: 0;
+        @include desktop-large {
+            width: toPercentage($wrapper-global, $wrapper-md + $offset-md-large)!important;
+        }
+        @include desktop-medium {
+            width: toPercentage($wrapper-global, $wrapper-md + $offset-md-medium)!important;
+        }
+        @include tablet {
+            width: toPercentage($wrapper-global-xs, $wrapper-xs + $offset-sm)!important;
+        }
+    }
+    .checkout-container {
+        margin: 30px 0;
+        overflow: visible;
+    }
+    .row-fluid [class*="span"] {
+        margin-left: initial;
+    }
+    .step.accordion-group {
+        .icon-user,
+        .icon-home,
+        .icon-credit-card {
+            display: none !important;
+        }
+    }
+    .step,
+    .cart {
+        border: none;
+    }
+    .accordion-toggle .link-box-edit {
+        background: inherit;
+        border: none;
+        opacity: 1;
+        box-shadow: none;
+    }
+    p.submit {
+        margin-top: 20px;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .btn-success,
+    .link-change-shipping {
+        border: none;
+        padding: 18px 32px;
+        background: #00C853 !important;
+        color: #FFF;
+        text-shadow: none;
+        text-transform: lowercase;
+        box-shadow: 2px 2px 17px rgba(0, 0, 0, .3);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &,
+        span {
+            @include encode-b;
+        }
+        @include btn-accessibility;
+        &:after {
+            content: url(/arquivos/checkout-arrow-down-step.png);
+            position: static;
+            display: block;
+            opacity: 1;
+            height: initial;
+            transform: initial;
+            transform-origin: initial;
+            background: transparent;
+            top: initial;
+            left: initial;
+            width: initial;
+            margin-left: 15px;
+        }
+        .icon-lock {
+            display: none;
+        }
+    }
+    ; // ORDERFORM PROFILE AND SHIPPING GRID
+    .row-fluid .orderform-template.inactive {
+        display: none;
+    }
+    .orderform-template {
+        display: flex;
+        flex-wrap: wrap;
+        &>.orderform-template-holder {
+            &>.row-fluid {
+                &>div>div {
+                    opacity: 0.6;
+                    transition: all 0.5s ease-in-out;
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .cart-fixed {
+            width: 100%;
+            position: static !important;
+            height: auto !important;
+        }
+        .orderform-template-holder {
+            width: toPercentage($wrapper-check-md, 808);
+            margin-right: toPercentage($wrapper-check-md, 97);
+            padding-left: 68px;
+            @include tablet {
+                padding-left: 0;
+            }
+            &>div.row-fluid {
+                display: flex;
+                flex-direction: column;
+                &>div {
+                    width: 100% !important;
+                }
+            }
+            .step,
+            .cart {
+                border: none;
+                background: #FBFBFB;
+                border-radius: 10px;
+                padding: toPercentage(739.96, 42) toPercentage(739.96, 38);
+                position: relative;
+                &:before {
+                    content: url(/arquivos/border-steps-checkout.png);
+                    position: absolute;
+                    top: 0px;
+                    opacity: .3;
+                    left: -16px;
+                    @include tablet {
+                        content: none;
+                    }
+                }
+                &:after {
+                    opacity: .3;
+                }
+                &.active {
+                    background: #F5F5F5;
+                    &:before {
+                        opacity: 1;
+                    }
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .cart-template.mini-car {
+            width: toPercentage($wrapper-check-md, 405);
+            @include tablet {
+                position: relative;
+                z-index: 9;
+            }
+        }
+        ; // style input 
+        input.postal-code {
+            max-width: 100px;
+        }
+        .box-delivery:after {
+            content: "";
+            clear: both;
+            display: block;
+            height: 0;
+        }
+        @include mobile {
+            .box-client-info-pf {
+                width: 100%;
+                margin: 0;
+            }
+        }
+        p.input:not(.client-email):not(.ship-postal-code):not(.ship-international):not(.ship-street):not(.payment-discounts-options) {
+            width: calc(50% - 17.5px);
+            float: left;
+            vertical-align: top;
+            &.client-first-name,
+            &.client-document,
+            &.client-company-name,
+            &.client-company-ie,
+            &.ship-number,
+            &.ship-street,
+            &.ship-neighborhood {
+                margin-right: 35px;
+            }
+            @include mobile {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+            }
+        }
+        p.input {
+            margin-bottom: 31px;
+            input,
+            select {
+                border: none;
+                background: #FFF;
+                border-radius: 0;
+                padding: 23px 17px;
+                border: 1px solid #E0E0E0;
+                outline: none;
+                box-shadow: none;
+                font-size: em(18);
+                width: 100%;
+                border-radius: 14px;
+                @include encode-r;
+                @include placeholder {
+                    text-transform: lowercase;
+                }
+            }
+            select {
+                height: 48px;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            label {
+                font-size: em(16);
+                text-transform: lowercase;
+                margin-bottom: 15px;
+                color: $cp1;
+                @include encode-b;
+            }
+            .help.error {
+                font-size: em(12);
+                color: $cr1;
+                width: 100% !important;
+                text-transform: lowercase;
+                @include encode-b;
+            }
+        }
+        .summary-template-holder,
+        .summary-cart-template-holder,
+        h2 {
+            display: none;
+        }
+    }
+    ; // LABEL CHECKBOX
+    label.checkbox {
+        margin: 10px 0;
+        text-transform: lowercase;
+        @include mobile {
+            font-size: 80%;
+        }
+        input {
+            display: none;
+            &:checked+span {
+                &:before {
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+                    background: #FC3C53;
+                }
+            }
+        }
+        span {
+            display: flex;
+            align-items: center;
+            &::before {
+                content: "";
+                width: 14px;
+                height: 14px;
+                border-radius: 100%;
+                background: #D2D2DC;
+                transition: all 0.5s ease-in-out;
+                margin-right: 12px;
+            }
+        }
+    }
+    .step {
+        .link-box-edit {
+            width: 271px;
+            display: flex;
+            align-items: center;
+            height: 51px;
+            padding: 0 32px;
+            background: #00C853 !important;
+            box-shadow: 2px 2px 17px rgba(0, 0, 0, .3);
+            position: relative;
+            border-radius: 10px;
+            justify-content: space-between;
+            outline: none !important;
+            &:before {
+                font-size: 18px;
+                color: $cw1;
+                @include encode-b;
+            }
+            &:after {
+                content: url(/arquivos/checkout-arrow-down-step.png);
+                position: static;
+                display: block;
+                opacity: 1;
+                height: initial;
+                transform: initial;
+                transform-origin: initial;
+                background: transparent;
+                top: initial;
+                left: initial;
+                width: initial;
+                margin-left: 15px;
+            }
+            .icon-edit {
+                display: none !important;
+            }
+        } // PROFILE    
+        &.client-profile-data {
+            .accordion-heading {
+                .accordion-toggle {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+            .link-box-edit {
+                &:before {
+                    content: "editar dados";
+                }
+                .icon-edit {
+                    display: none !important;
+                }
+            }
+            @include icon("/arquivos/checkout-profile-icon.png") {
+                width: 30px;
+                height: 30px;
+            }
+            @include changeText("1",
+            "meus",
+            "dados",
+            135,
+            75);
+            & {
+                @include changeText("1",
+                "meus",
+                "dados",
+                135,
+                75,
+                "FE264A");
+            }
+            .client-notice.notice {
+                display: none;
+            }
+            .corporate-title,
+            #is-corporate-client,
+            #not-corporate-client,
+            #is-corporate-client {
+                color: $cp1;
+                text-transform: lowercase;
+                font-size: em(14);
+                @include encode-b;
+            }
+            #not-corporate-client {
+                color: $cr1;
+            }
+        }
+        &.shipping-data {
+            @include icon("/arquivos/checkout-address-icon.png") {
+                width: 30.94px;
+                height: 40px;
+            }
+            @include changeText("2",
+            "meus endereços",
+            "e tipo de entrega",
+            250,
+            75);
+            & {
+                @include changeText("2",
+                "meus endereços",
+                "e tipo de entrega",
+                250,
+                75,
+                "FE264A");
+            }
+            #edit-shipping-data {
+                display: none !important;
+            }
+            .ship-filled-data {
+                margin-bottom: 30px;
+            }
+            .ship-street {
+                width: 100%;
+            }
+            .link-change-shipping {
+                margin-top: 30px;
+                font-size: 0;
+                border: none;
+                padding: 13px 26px;
+                color: $cw1 !important;
+                display: flex;
+                justify-content: space-between;
+                &::before {
+                    content: "mudar endereço e/ou entrega";
+                    font-size: 18px;
+                    color: $cw1 !important;
+                    @include encode-b;
+                }
+            }
+        }
+    }
+    #payment-data {
+        .link-box-edit.btn.btn-small {
+            display: none;
+        }
+        .notification {
+            color: $cr1;
+            font-size: em(16);
+            margin-top: 10px;
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+        .step {
+            &:not(.active) {
+                display: flex;
+                justify-content: space-between;
+            }
+            @include icon("/arquivos/checkout-payment-icon.png") {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .link-gift-card {
+            position: static;
+            text-transform: lowercase;
+            width: 100%;
+            padding-left: 10px;
+        }
+        .gift-card-section {
+            width: 100%;
+            margin: 0 0 0 0;
+            display: flex;
+            justify-content: flex-start;
+            fieldset {
+                width: 100%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+        }
+        .payment-group-item {
+            border: none;
+            .payment-group-item-text {
+                padding-right: 60px;
+                text-transform: lowercase;
+                text-decoration: none;
+                @include encode-b;
+            }
+        }
+        .payment-group {
+            background: transparent;
+            width: 34%;
+            @include mobile {
+                width: 100%;
+            }
+        }
+        .payment-group-list-btn {
+            width: auto;
+        }
+        .payment-group-item.active {
+            background: #FFF;
+        }
+        #btn-add-gift-card {
+            margin-top: 20px;
+            background: #000;
+            color: #FFF;
+            padding: 10px 20px;
+            text-transform: lowercase;
+            font-size: em(14);
+            @include encode-b;
+        }
+        .loading-inline {
+            display: none;
+        }
+        &>div {
+            @include changeText("3",
+            "pagamento",
+            "",
+            183,
+            75);
+            & {
+                @include changeText("3",
+                "pagamento",
+                "",
+                183,
+                75,
+                "FE264A");
+            }
+        }
+    }
+    @include tablet {
+        .payment-submit-wrap {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            border-radius: 0;
+            z-index: 99999;
+            margin: 0 !important;
+            .btn-success,
+            .link-change-shipping {
+                border-radius: 0;
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+}

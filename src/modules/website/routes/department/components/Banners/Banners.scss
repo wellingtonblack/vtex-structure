@@ -1,0 +1,63 @@
+$wrapper: $wrapper-global / 2;
+$wrapper-banner: 377;
+.bannerWrapper {
+    display: flex;
+    .wrapper {
+        width: 100%;
+        display: flex;
+        position: relative;
+        @include mobile {
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .letter {
+            position: absolute;
+            @include encode-r;
+            color: $cw1;
+            left: 0;
+            right: 0;
+            width: toPercentage($wrapper-global, 144);
+            z-index: 1;
+            font-size: 11vw;
+            left: 0;
+            right: 0;
+            margin: auto;
+            opacity: .6;
+            line-height: 12vw;
+            @include mobile {
+                width: toPercentage($wrapper-xs, 144);
+                font-size: 58vw;
+                height: 94px;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+    @include mobile {
+        @include wrapper;
+    }
+    .bannerItem {
+        width: 100%;
+        .banner {
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            background-position: center;
+            @include responsive-image(220, $wrapper-global / 2);
+            @include desktop-medium {
+                @include responsive-image(220, 1440 / 2);
+            }
+            @include desktop-small {
+                @include responsive-image(220, 1280 / 2);
+            }
+            @include tablet {
+                @include responsive-image(220, 992 / 2);
+            }
+            @include mobile {
+                @include responsive-image(186, 355);
+            }
+        }
+    }
+}

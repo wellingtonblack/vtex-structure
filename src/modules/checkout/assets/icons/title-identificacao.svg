@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 219 85.25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #010101;
+        font-size: 36px;
+        font-family: SegoeUI-Bold, Segoe UI;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #fe264a;
+        stroke: #fff;
+        stroke-width: 0.5px;
+      }
+    </style>
+  </defs>
+  <g id="title-identificacao" transform="translate(-576 -197.75)">
+    <text id="Identificação" class="cls-1" transform="translate(576 274)"><tspan x="0" y="0">Identificação</tspan></text>
+    <g id="Group_2877" data-name="Group 2877" transform="translate(579 198)">
+      <path id="Path_25" data-name="Path 25" class="cls-2" d="M25.607,19.393a14.942,14.942,0,0,0-5.7-3.575,8.672,8.672,0,1,0-9.813,0A15.024,15.024,0,0,0,0,30H2.344a12.656,12.656,0,1,1,25.312,0H30A14.9,14.9,0,0,0,25.607,19.393ZM15,15a6.328,6.328,0,1,1,6.328-6.328A6.335,6.335,0,0,1,15,15Z" transform="translate(0)"/>
+    </g>
+  </g>
+</svg>

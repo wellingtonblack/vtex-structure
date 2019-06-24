@@ -1,0 +1,48 @@
+.freteBar {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 30px;
+    background: #990D0D;
+    padding: 0 toPercentage(432, 30);
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    .text {
+        position: relative;
+        z-index: 1;
+        color: $cw1;
+        font-size: em(18);
+        width: 100%;
+        @include encode-r;
+        & > div {
+            width: 100%;
+        }
+        .textFrete {
+            display: flex;
+            justify-content: space-between;
+        }
+        .winfrete {
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+        span {
+            @include encode-b;
+        }
+    }
+
+    .progress {
+       background: #FE264A;
+       height: 100%;
+       width: 0%;
+       position: absolute;
+       position: absolute;
+       left: 0;
+       top: 0;
+       bottom: 0;
+       transition: all 1s ease-in-out;
+    }
+}

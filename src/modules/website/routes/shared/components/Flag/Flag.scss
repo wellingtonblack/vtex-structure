@@ -1,0 +1,23 @@
+.flag {
+     :global {
+        .flag {
+            padding: 3px 16px;
+            color: #fff;
+            background: #000;
+            text-transform: lowercase;
+            text-align: center;
+            overflow: hidden;
+            white-space: pre;
+            margin-right: 5px;
+            margin-bottom: 3px;
+            @include encode-sb;
+            z-index: 9;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .flag-custom {
+            margin-bottom: 3px;
+        }
+    }
+}

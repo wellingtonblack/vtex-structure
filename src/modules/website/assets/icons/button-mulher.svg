@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90.5 27.118">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      
+
+      .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-dasharray: 2;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #fff;
+      }
+    </style>
+  </defs>
+  <g id="button-mulher" transform="translate(-785.5 -477)">
+    <g id="Group_2059" data-name="Group 2059" transform="translate(14 0.118)">
+      <text id="mulher" class="cls-1" transform="translate(802 493.882)"><tspan x="0" y="0">mulher</tspan></text>
+      <line id="Line_33" data-name="Line 33" class="cls-2" x2="58" transform="translate(803.5 503.5)"/>
+    </g>
+    <path id="female" class="cls-3" d="M100.006,6.695a6.695,6.695,0,1,0-7.526,6.643v3.353h-2.1a.831.831,0,1,0,0,1.661h2.1v2.429a.831.831,0,0,0,1.661,0V18.353h2.1a.831.831,0,1,0,0-1.661h-2.1V13.338A6.7,6.7,0,0,0,100.006,6.695Zm-11.728,0a5.033,5.033,0,1,1,5.033,5.033A5.039,5.039,0,0,1,88.277,6.695Z" transform="translate(699.384 480.5)"/>
+  </g>
+</svg>

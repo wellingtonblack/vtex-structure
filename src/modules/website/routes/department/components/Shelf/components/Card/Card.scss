@@ -1,0 +1,233 @@
+$wrapper: (($wrapper-md - 9 * 1) / 4) * 2;
+.card {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin-top: toPercentage($wrapper, 40);
+    padding: 0 toPercentage($wrapper, 44) 0 toPercentage($wrapper, 24);
+    @media screen and (max-width: 599px) {
+        padding: 0 toPercentage($wrapper-xs, 56);
+    }
+    .ratting {
+        height: 25px;
+        margin-bottom: 14px;
+        width: 100%;
+    }
+    &.reverse {
+        margin-top: toPercentage($wrapper-md, 32);
+        padding: 0 toPercentage($wrapper-md, 32) 0 toPercentage($wrapper-md, 32);
+        .wrapperCard {
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            .image {
+                width: toPercentage($wrapper-md, 390);
+                max-width: 300px;
+            }
+            .boxInformations {
+                width: toPercentage($wrapper-md, 600);
+                display: flex;
+                flex-direction: column;
+                padding: 0 toPercentage($wrapper-md, 40);
+                .productName {
+                    order: 1;
+                    font-size: em(17);
+                    height: auto;
+                    margin-bottom: 27px;
+                }
+                .shortDescription {
+                    order: 3;
+                    font-size: em(14);
+                    line-height: em(20, 14);
+                    color: $cp1;
+                    text-transform: lowercase;
+                    text-decoration: none;
+                    margin-bottom: 40px;
+                    height: auto;
+                    border: none;
+                    padding: 0;
+                }
+                .ratting {
+                    order: 2;
+                    height: 34px;
+                    border-bottom: 1px solid $cg15;
+                    margin-bottom: 17px;
+                    width: 100%;
+                    margin-top: 0;
+                }
+                .flag {
+                    order: 4;
+                }
+            }
+            .boxPrice {
+                width: toPercentage($wrapper-md, 300);
+            }
+        }
+    }
+    .wrapperCard {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        display: flex;
+        padding-bottom: 30px;
+        @media screen and (max-width: 599px) {
+            flex-direction: column;
+        }
+        .image {
+            width: toPercentage(675, 350);
+            @media screen and (max-width: 599px) {
+                width: 100%;
+            }
+        }
+        .informations {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            width: toPercentage(675, 675 - 350);
+            @media screen and (max-width: 599px) {
+                width: 100%;
+            }
+        }
+        .boxInformations {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            .flag {
+                margin-bottom: 20px;
+                height: 28px;
+                text-transform: lowercase;
+                display: flex;
+                overflow: hidden;
+                align-items: center;
+                @include mobile {
+                    display: none;
+                }
+            }
+            .productName {
+                font-size: em(14);
+                line-height: em(24, 14);
+                margin-bottom: 13px;
+                color: $cp1;
+                text-transform: lowercase;
+                height: 47px;
+                overflow: hidden;
+                @include encode-sb;
+            }
+            .shortDescription {
+                height: 110px;
+                font-size: em(12);
+                color: $cp1;
+                line-height: em(19, 12);
+                padding: 21px 0;
+                text-transform: lowercase;
+                margin-bottom: 19px;
+                overflow: hidden;
+                border: {
+                    top: 1px solid $cg15;
+                    bottom: 1px solid $cg15;
+                }
+                ;
+                @include encode-r;
+                strong {
+                    @include encode-b;
+                }
+                @media screen and (max-width: 599px) {
+                    display: none;
+                }
+            }
+        }
+        .boxPrice {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            @media screen and (max-width: 599px) {
+                width: 100%;
+            }
+            .oldPrice {
+                font-size: em(14);
+                color: $cg10;
+                height: 19px;
+                padding: 0 8px;
+                @include encode-b;
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                &.active {
+                    &:after {
+                        content: "";
+                        width: 100%;
+                        margin: auto;
+                        height: 1.5px;
+                        background: #707070;
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+            .price {
+                background: $cp1;
+                font-size: em(21);
+                color: $cw1;
+                padding: 2px 11px 5px 11px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                @include encode-b;
+                span:nth-child(1) {
+                    font-size: 50%;
+                }
+                span:nth-child(2) {
+                    font-size: 50%;
+                    vertical-align: top;
+                    top: 5px;
+                    position: relative;
+                    @include encode-sb;
+                }
+            }
+            .bestPrice {
+                color: $cp1;
+                display: block;
+                @include encode-m;
+                font-size: em(14);
+                white-space: pre;
+                margin-bottom: 10px;
+                span {
+                    color: #FFF;
+                    display: inline-block;
+                    font-size: em(14, 14);
+                    padding: 6px 8px 6px 0px;
+                    background: $cp1;
+                    cursor: pointer;
+                    margin-left: 17px;
+                    @include encode-b;
+                }
+            }
+            .parcels {
+                color: $cp1;
+                font-size: em(14);
+                margin-bottom: 26px;
+                @include encode-r;
+                span {
+                    @include encode-b;
+                }
+            }
+            .addToCartButton {
+                display: none;
+                animation-duration: 1.5s;
+                @include fade;
+                @media screen and (max-width: 599px) {
+                    display: none!important;
+                }
+            }
+        }
+    }
+}

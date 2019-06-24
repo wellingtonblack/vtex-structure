@@ -1,0 +1,70 @@
+.overTopWrapper {
+    background: $cg1;
+    position: relative;
+    z-index: 2;
+    @include wrapper;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        .list {
+            display: flex;
+            justify-content: center;
+            .item {
+                padding: 6px 32px;
+                display: flex;
+                align-items: center;
+                .link {
+                    font-size: em(14);
+                    border: none;
+                    color: $cp1;
+                    text-decoration: none;
+                    display: block;
+                    @include encode-sb;
+                }
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                .item {
+                    border-bottom-width: 4px;
+                    border-bottom-style: solid;
+                }
+            }
+            &:nth-child(1) {
+                .item:nth-child(1) {
+                    border-bottom-color: $cr4;
+                }
+                .item:nth-child(2) {
+                    border-bottom-color: $co1;
+                }
+                .item:nth-child(3) {
+                    border-bottom-color: $cy1;
+                }
+            }
+            &:nth-child(2) {
+                .item:nth-child(1) {
+                    border-bottom-color: $cb1;
+                }
+            }
+            &:nth-child(3) {
+                .item {
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                    .link {
+                        color: $cr4;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .loop {
+                            width: 27px;
+                            display: block;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

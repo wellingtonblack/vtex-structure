@@ -1,0 +1,112 @@
+$wrapper: 432;
+$wrapper-offset: $wrapper - 55 * 2;
+.cep {
+    &.style1 {
+        padding: {
+            top: toPercentage($wrapper, 11);
+            left: toPercentage($wrapper, 22);
+            right: toPercentage($wrapper, 22);
+            bottom: toPercentage($wrapper, 15);
+        }
+        .wrapperCep {
+            background: $cg1;
+            display: flex;
+            align-items: center;
+            .boxtext {
+                width: toPercentage($wrapper-offset, 184);
+                padding-right: toPercentage($wrapper-offset, 28);
+                .title {
+                    font-size: em(12);
+                    color: $cp1;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                    text-align: right;
+                    display: block;
+                    @include encode-r;
+                }
+                .subtitle {
+                    font-size: em(10);
+                    color: $cg10;
+                    text-decoration: none;
+                    text-align: right;
+                    display: block;
+                    @include encode-r;
+                    text-transform: uppercase;
+                }
+            }
+            .form {
+                form {
+                    width: 100%;
+                }
+                width: toPercentage($wrapper-offset, 152);
+                display: flex;
+                .input {
+                    padding: 20px 12px;
+                    border: 1px solid #DCDCDC;
+                    color: $cg11;
+                    background: $cg2;
+                    text-transform: uppercase;
+                    outline: none;
+                    width: 100%;
+                    @include placeholder {
+                        color: $cg11;
+                        font-size: em(10);
+                        @include encode-b;
+                    }
+                }
+            }
+        }
+    }
+    &.style2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: {
+            top: 21px;
+            left: 0;
+            right: 0;
+            bottom: 6px;
+        }
+        .wrapperCep {
+            .boxtext {
+                .title {
+                    font-size: em(13);
+                    color: $cp1;
+                    margin-bottom: 5px;
+                    text-align: right;
+                    display: block;
+                    width: 65px;
+                    @include encode-b;
+                }
+                .subtitle {
+                    font-size: em(12);
+                    color: $cp1;
+                    text-decoration: none;
+                    text-align: right;
+                    display: block;
+                    width: 47px;
+                    text-align: left;
+                    @include encode-r;
+                }
+            }
+            .form {
+                width: 150px;
+                margin: 0 10px;
+                display: flex;
+                .input {
+                    padding: 15px 33px;
+                    border: 1px solid #DCDCDC;
+                    border-radius: 10px;
+                    color: $cg11;
+                    font-size: em(14);
+                    outline: none;
+                    width: 100%;
+                    @include placeholder {
+                        color: $cg11;
+                        font-size: em(14);
+                    }
+                }
+            }
+        }
+    }
+}

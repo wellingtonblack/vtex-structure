@@ -1,0 +1,158 @@
+.mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 999;
+    @include cursorClose;
+}
+
+.boxLogin {
+    display: flex;
+    padding: 35px;
+    background: $cg12;
+    position: absolute;
+    margin-top: 40%;
+    box-sizing: border-box;
+    height: 188px;
+    bottom: -200px;
+    animation-duration: 0.5s;
+    right: 0;
+    z-index: 9999;
+    @include fade;
+   
+    .list {
+        display: flex;
+        background: $cw1;
+        border-radius: 20px;
+        padding: 22px 37px;
+        justify-content: space-between;
+        box-sizing: border-box;
+       
+        li {
+            margin-right: 40px;
+            cursor: pointer;      
+            position: relative;
+            .label {
+                width: 228.39px;
+                height: 82.68px;
+                position: absolute;
+                background: #313131;
+                font-size: em(12);
+                line-height: em(16, 12);
+                border-radius: 20px;
+                color: $cw1;
+                animation-duration: 0.5s;
+                display: none;
+                left: -80px;
+                justify-content: flex-start;
+                text-align: left;
+                align-items: center;
+                bottom: -109px;
+                padding: 20px 36px;
+                @include encode-b;
+                @include fade;
+                &:after {
+                    content: url(/arquivos/border-account.png);
+                    position: absolute;
+                    top: -15px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 103px;
+                }
+            }     
+            &:hover {
+                .label {
+                    display: flex;
+                    
+                }
+            }
+           .icon {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 19px;
+                &.meucadastro {
+                    width: 42.93px;
+                    height: 50px;
+                }
+                &.meuendereco {
+                    width: 42.45px;
+                    height: 50px;
+                }
+                &.meuspedidos {
+                    width: 34.83px;
+                    height: 50px;
+                }
+                &.meuclube {
+                    width: 48.51px;
+                    height: 50px;
+                }
+            }
+            .link {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
+                color: $cp1;
+                font-size: em(13); 
+                text-align: center;
+                span {
+                    @include encode-b;
+                }
+            }
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &.first {
+            width: 251px;
+            margin-right: 33px
+        }
+        &.second {
+            width: 576px;
+        }
+        &.logged {
+            margin-left: 33px;
+        }
+    }
+   
+    .imageWrapper {
+        margin-right: 28px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .image {
+            width: 120px;
+            height: 120px;
+            border-radius: 13px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-color: $cg11;
+            margin-right: 28px;
+        }
+        .title {
+            font-size: em(12);
+            @include encode-r;
+            text-align: left;
+            display: block;
+            span {
+                display: block;
+            }
+            .name {
+                margin: 5px 0;
+                font-size: em(24, 12);
+                @include encode-b;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    
+    
+}

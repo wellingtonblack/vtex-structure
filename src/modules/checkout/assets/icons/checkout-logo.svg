@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81.768" height="66.714" viewBox="0 0 81.768 66.714">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fe264a"/>
+      <stop offset="1" stop-color="#f60"/>
+    </linearGradient>
+  </defs>
+  <g id="checkout-logo" transform="translate(-294 -70)">
+    <path id="Path_900" data-name="Path 900" d="M13.413,4H71.494c0,5.18.314,59.18,0,59.18H63.488c-17.267,0-34.378.157-51.488.157V18.756H57.523v30.3H26.756v-15.7h8.32v7.378H49.36V27.075h-29.2V55.017H63.488V12.32H13.256A11.26,11.26,0,0,0,14.2,7.767,16.117,16.117,0,0,0,13.413,4Z" transform="translate(304.134 73.378)" fill="#24221e" fill-rule="evenodd"/>
+    <path id="Intersection_1" data-name="Intersection 1" d="M3.883,19.37H18.095a10.989,10.989,0,0,1-14.212,0ZM2.023,17.343A10.957,10.957,0,0,1,.656,14.736H21.322a10.974,10.974,0,0,1-1.367,2.607ZM.094,12.43A11.152,11.152,0,0,1,.061,9.824H21.917a11.178,11.178,0,0,1,.061,1.164,11.062,11.062,0,0,1-.094,1.442ZM.56,7.518A10.929,10.929,0,0,1,1.832,4.912H20.146a10.939,10.939,0,0,1,1.272,2.606ZM3.883,2.606a10.99,10.99,0,0,1,14.211,0Z" transform="translate(294 70)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

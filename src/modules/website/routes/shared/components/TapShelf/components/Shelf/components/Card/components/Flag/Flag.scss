@@ -1,0 +1,20 @@
+.flag {
+    :global {
+        .flag {
+            padding: 3px 16px;
+            border-radius: 30px;
+            border: 1px solid $cr1;
+            color: $cr1;
+            text-transform: lowercase;
+            text-align: center;
+            overflow: hidden;
+            white-space: pre;
+            margin-right: 5px;
+            margin-bottom: 3px;
+            @include encode-sb;
+            &:last-child {
+                margin-bottom: 0; 
+            }
+        }
+    }
+}

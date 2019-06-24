@@ -1,0 +1,62 @@
+.content {
+    @include mobile {
+        display: none;
+    }
+    @include wrapper;
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 0;
+        text-transform: lowercase;
+        font-size: em(14);
+        @include encode-m;
+        li {
+            position: relative;
+            &.item,
+            &.split {
+                cursor: pointer;
+                color: $cp1;
+                &:hover>.children {
+                    display: block;
+                }
+            }
+        }
+        .icon {
+            width: 17.78px;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .split {
+            margin: 0 10px;
+        }
+        .children {
+            position: absolute;
+            width: 200px;
+            background: #FFF;
+            border: 1px solid #D2D2D2;
+            z-index: 999;
+            border-radius: 13px;
+            transform: translateY(-70px);
+            top: 0;
+            overflow: hidden;
+            display: none;
+            .listchildren {
+                height: 100%;
+                width: 100%;
+            }
+            li {
+                a {
+                    display: block;
+                    padding: 12px 20px;
+                    text-decoration: none;
+                    color: $cp1;
+                    &.active, &:hover {
+                        background: $cr1;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}

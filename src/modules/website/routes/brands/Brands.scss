@@ -1,0 +1,247 @@
+:global {
+    @include tablet {
+        body {
+            background: $cg1 !important;
+        }
+        .searchHeader {
+            opacity: 0;
+            height: 20px;
+        }
+        #root-footer {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
+.container {
+    margin-top: 69px;
+    * {
+        text-transform: lowercase;
+    }
+    @include wrapper;
+    .featured {
+        color: $cr1;
+    }
+    .title {
+        font-size: em(36);
+        @include encode-b;
+        margin-bottom: 17px;
+        @include tablet {
+            display: none;
+        }
+    }
+    .letterList {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 53px;
+        margin-left: -1%;
+        .letter {
+            font-size: em(24);
+            @include encode-r;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            padding: 10px;
+            cursor: pointer;
+            align-items: center;
+            &.active,
+            &:hover {
+                padding: 10px;
+                background: $cp1;
+                color: #FFF;
+            }
+            @include tablet {
+                margin-right: 0;
+                font-size: em(20);
+                margin-bottom: 15px;
+            }
+        }
+    }
+    @include tablet {
+        .titleMobile {
+            font-size: em(24);
+            margin-bottom: 57px;
+            @include encode-b;
+            .featured {
+                color: $cr1;
+            }
+        }
+    }
+    @include tablet {
+        .wrapperLetters {
+            position: sticky;
+            top: 0;
+            bottom: 0;
+            width: 10%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            right: 0;
+            height: 100vh;
+            order: 1;
+            margin-right: -3%;
+            margin-left: auto;
+            margin-top: 20px;
+        }
+        .boxLettersAndList {
+            display: flex;
+        }
+    }
+    .wrapperSearch {
+        margin-bottom: 40px;
+        display: flex;
+        position: relative;
+        @include tablet {
+            width: 100%;
+            padding: 0;
+            margin-top: -103px;
+            position: relative;
+            z-index: 99;
+            margin-bottom: auto;
+            width: 100%;
+        }
+        .formSearch {
+            width: toPercentage($wrapper-md, 665);
+            padding-right: toPercentage($wrapper-md, 89);
+            position: relative;
+            @include tablet {
+                width: 100%;
+                padding-right: 0;
+            }
+            .search {
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                margin-right: 17%;
+                top: 0;
+                bottom: 0;
+                margin-top: auto;
+                margin-bottom: auto;
+                @include tablet {
+                    margin-right: 3%;
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            input {
+                padding: 24px 17px;
+                width: 100%;
+                max-width: 563px;
+                border-radius: 10px;
+                border: 1px solid #DBDBDB;
+                background: $cg1;
+                @include encode-m;
+                font-size: em(16);
+                color: $cp1;
+                outline: none;
+                @include tablet {
+                    max-width: 100%;
+                }
+            }
+        }
+        $bd: $wrapper-md - 665;
+        .brandsILike {
+            width: toPercentage($wrapper-md, $bd);
+            @include tablet {
+                display: none;
+            }
+            .label {
+                font-size: em(14);
+                margin-bottom: 20px;
+                @include encode-m;
+                display: block;
+            }
+            .listOfBrands {
+                display: flex;
+                justify-content: space-around;
+                li {
+                    width: toPercentage($bd, 140);
+                    a {
+                        text-decoration: none;
+                        color: $cp1;
+                    }
+                }
+            }
+        }
+    }
+    .wrapperLisOfBrands {
+        @include tablet {
+            width: 90%;
+            margin-top: 37px;
+        }
+    }
+    .brandContainer {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            width: 100%;
+        }
+        label {
+            display: block;
+            width: 100%;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid $cp1;
+            font-size: em(36);
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            @include encode-b;
+            &.on{
+                position: sticky;
+                top: 0;
+                background: #F2F2F2;
+                transition: ease-in-out .2s;
+            }
+            .iconArrow {
+                width: 40px;
+                height: 40px;
+                display: block;
+                transition: all 0.5s ease-in-out;
+                &.active {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .listOfBrands {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-height: 0;
+            align-items: flex-start;
+            transition: all 0.5s ease-in-out;
+            overflow: hidden;
+            opacity: 0;
+            @include tablet {
+                display: none;
+            }
+            &.active {
+                max-height: 400px;
+                opacity: 1;
+                @include tablet {
+                    max-height: 100%;
+                    display: block;
+                }
+            }
+            li {
+                width: toPercentage($wrapper-md, 354);
+                font-size: em(18);
+                margin-bottom: 32px;
+                @include encode-r;
+                cursor: pointer;
+                @include tablet {
+                    width: 100%;
+                }
+                &:hover {
+                    @include encode-b;
+                }
+                a {
+                    text-decoration: none;
+                    color: $cp1;
+                }
+            }
+        }
+    }
+}

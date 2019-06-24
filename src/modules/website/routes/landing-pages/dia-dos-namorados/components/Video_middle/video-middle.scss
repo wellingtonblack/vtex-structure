@@ -1,0 +1,117 @@
+.videoMiddle {
+    @include wrapper;
+    background: #858979;
+    margin-bottom: 100px;
+    @include tablet {
+        // padding: 0% 0 25% 0;
+        margin-bottom: 75px;
+    }
+    img {
+        max-width: 100%
+    }
+    .wrapper {
+        .content {
+            display: flex;
+            padding: 80px 0;
+            align-items: center;
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+            }
+            @include mobile {
+                padding: 80px 5px;
+            }
+            .boxLeft {
+                width: toPercentage($wrapper-global, 600);
+                margin-right: toPercentage($wrapper-global, 35);
+                height: 100%;
+                padding: 40px 0;
+                @include desktop-medium {
+                    padding: 15px 0px;
+                }
+                @include desktop-small {}
+                @include tablet {
+                    border: 0;
+                    width: auto;
+                }
+                @include mobile {
+                    width: 100%;
+                    padding: 0 0px 0 15px;
+                }
+                .title {
+                    @include encode-sb;
+                    text-transform: uppercase;
+                    color: $cw1;
+                    font-size: em(37);
+                    line-height: 44px;
+                    padding: 0 10px 40px 0px;
+                    @include desktop-medium {
+                        font-size: em(32);
+                        line-height: 35px;
+                    }
+                    @include tablet {
+                        padding: 0 0px 20px 0px;
+                    }
+                    @include tablet {
+                        font-size: 42px;
+                        line-height: 45px;
+                    }
+                }
+                .subtitle {
+                    @include encode-m;
+                    color: $cw1;
+                    font-size: em(24);
+                    line-height: 30px;
+                    padding: 0 10px 15px 0px;
+                    letter-spacing: 1.4px;
+                    @include desktop-medium {
+                        font-size: em(20);
+                        line-height: 25px;
+                        letter-spacing: .8px;
+                    }
+                    @include mobile {
+                        font-size: em(26);
+                        line-height: 32px;
+                        padding: 0 10px 6px 0px;
+                    }
+                }
+                .icon {
+                    max-width: 499px;
+                    display: block;
+                    margin-bottom: 35px;
+                }
+                .link {
+                    @include encode-r;
+                    line-height: 20px;
+                    padding: 0px 10px 20px 0px;
+                    display: block;
+                    a {
+                        color: $cw1;
+                        font-size: em(14);
+                        @include desktop-medium {
+                            font-size: em(12);
+                        }
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .boxRight {
+                padding-top: 3%;
+                @include tablet {
+                    width: auto;
+                    padding: 0 7px 0 7px;
+                }
+                .poster {
+                    @include tablet {
+                        // box-shadow: 30px 30px 40px #606554;
+                    }
+                    img {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+.departmentComponent {
+    .catalogControls {
+        @include wrapper;
+        overflow: hidden;
+         :global {
+            .showFilter {
+                height: 420px!important;
+                border-top: 1px solid #dbdbdb;
+                @include tablet {
+                    height: 980px!important;
+                }
+            }
+        }
+        .wrapper {
+            &.filterHeader {
+                position: relative;
+                background: $cw1;
+                z-index: 1;
+            }
+            &.dropDown {
+                // max-height: 460px;
+                transition: .5s;
+                padding: 0;
+                overflow: hidden;
+                height: 0;
+                @include tablet {
+                    transition: 1s;
+                    // max-height: auto;
+                }
+            }
+            display: flex;
+            justify-content: space-between;
+            padding: toPercentage($wrapper-md, 0)0 10px 0;
+            align-items: center;
+            .controlsOfCatalog {
+                display: flex;
+                align-items: center;
+                @include tablet {
+                    display: none;
+                }
+            }
+            .numberOfProducts {
+                color: $cp1;
+                font-size: em(14);
+                @include encode-r;
+                span {
+                    @include encode-b;
+                }
+            }
+        }
+    }
+    .buttonFilter {
+        background: transparent;
+        color: $cp1;
+        font-size: em(12);
+        border: none;
+        padding: 11px 0px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        text-transform: uppercase;
+        @include encode-b;
+        @include btn-accessibility;
+        .filterIcon {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+        }
+        .filterIcon2 {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        @media screen and (max-width: 599px) {
+            width: toPercentage($wrapper-xs, $wrapper-xs);
+            // text-align: center;
+            // justify-content: center;
+            // padding: 11px toPercentage($wrapper-xs, 30);
+        }
+    }
+    .wrapperFilterCatalogMob {
+        display: none;
+        @media screen and (max-width: 599px) {
+            display: flex;
+            background: $cw1;
+            border-radius: 20px 20px 0 0;
+            padding: toPercentage($wrapper-xs, 20) toPercentage($wrapper-xs, 14);
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+    .listFilters {
+        width: calc(100% - 552px);
+        margin: 0 59px;
+        display: flex;
+        flex-direction: column;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        @include scrollbar {
+            height: 5px;
+        }
+        @include scrollbar-thumb {
+            background: $cg2;
+        }
+        @include tablet {
+            display: none;
+        }
+        &>div {
+            white-space: nowrap;
+            display: flex;
+        }
+        .title {
+            color: $cp1;
+            font-size: em(12);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            @include encode-b;
+        }
+        .buttonClean {
+            padding: 13px 22px;
+            color: $cp1;
+            border: 1px solid #CBCBCB;
+            display: inline-block;
+            margin-right: 22px;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            font-size: em(12);
+            font-size: em(12);
+            .filterItem {
+                margin-left: 32px;
+                width: 13px;
+                height: 13px;
+                display: block;
+            }
+            strong {
+                @include encode-b;
+            }
+        }
+    }
+    .wrapperCatalog {
+        padding-bottom: 30px;
+        @include wrapper;
+        @include tablet {
+            background: transparent;
+        }
+    }
+    @media screen and (max-width: 599px) {
+        .wrapperPaginationBottom {
+            width: 100%;
+            @include wrapper;
+            .wrapper {
+                border-radius: 0 0 20px 20px;
+                background: $cw1;
+                padding: toPercentage($wrapper-xs, 64 - 30) toPercentage($wrapper-xs, 51) toPercentage($wrapper-xs, 64) toPercentage($wrapper-xs, 51);
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

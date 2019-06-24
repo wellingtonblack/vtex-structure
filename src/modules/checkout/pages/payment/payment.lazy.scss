@@ -1,0 +1,89 @@
+:global {
+    @include tablet {
+        body {
+            padding-bottom: 75px!important;
+        }
+    }
+    .form-step {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .payment-group-list-btn {
+        display: flex;
+        @include tablet {
+            margin-top: 30px;
+            justify-content: space-around;
+        }
+    }
+    .icon-credit-card+span {
+        display: none;
+    }
+    
+    #payment-data .payment-group-item {
+        text-decoration: none;
+        color: $cp1;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        opacity: 0.3;
+        transition: all 0.5s ease-in-out;
+        &.active {
+            opacity: 1;
+        }
+        &#payment-group-creditCardPaymentGroup {
+            &::before {
+                content: url(/arquivos/credit-card-icon.png);
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 5px;
+            }
+        }
+        &#payment-group-bankInvoicePaymentGroup {
+            &::before {
+                content: url(/arquivos/bullet-icon.png);
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 5px;
+            }
+        }
+        &::before {
+            height: 28px;
+            width: 50px;
+        }
+        
+        .payment-group-item-text {
+            background: none;
+            padding: 0;
+            background: none;
+            text-align: center;
+            font-size: em(14);
+            line-height: em(16, 14);
+            text-decoration: none;
+            max-width: 100px;
+            @include encode-r;
+        }
+    }
+    #payment-data .payment-group-item.active {
+        background: transparent;
+        &:after {
+            content: "";
+            width: 46px;
+            background: $cr1;
+            height: 3px;
+            border-radius: 10px;
+            display: block;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .steps-view {
+        background: transparent;
+        width: 100%;
+        margin-top: 36px;
+    }
+}

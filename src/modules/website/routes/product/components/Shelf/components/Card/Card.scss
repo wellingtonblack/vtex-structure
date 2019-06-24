@@ -1,0 +1,85 @@
+.card {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: toPercentage($wrapper-md, 39);
+    padding-right: toPercentage($wrapper-md, 5.5);
+    padding-left: toPercentage($wrapper-md, 5.5);
+    @include desktop-small {
+        width: 100%;
+    }
+    .loading.imageWrapper {
+        @include responsive-image(494, 382);
+    }
+    .wrapperCard {
+        width: 100%;
+        height: 100%;
+        .flag {
+            position: absolute;
+            margin-bottom: 20px;
+            height: 26px;
+            text-transform: lowercase;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+            top: 30px;
+            right: toPercentage(359, 2.5);
+            z-index: 1;
+            @include mobile {
+                display: none
+            }
+        }
+        .boxInformations {
+            margin-bottom: 10px;
+            .productName {
+                font-size: em(16);
+                line-height: em(20, 14);
+                color: $cp1;
+                text-transform: uppercase;
+                height: 40px;
+                overflow: hidden;
+                text-align: center;
+                @include encode-m;
+                max-width: 300px;
+                margin: 10px auto 0 auto;
+                @include mobile {
+                    min-height: 40px;
+                    font-size: em(10);
+                }
+            }
+        }
+        .boxPrice {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            
+            .price {
+                font-size: em(19);
+                color: $cp1;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                @include encode-m;
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+                height: 24px;
+                &.loading {
+                    width: 80px;
+                }
+            }
+        }
+    }
+    .ratting {
+        height: 25px;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+.loading {
+    @include loading;
+}

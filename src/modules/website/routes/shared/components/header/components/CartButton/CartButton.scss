@@ -1,0 +1,53 @@
+.cartButton {
+    display: block;
+    border: none;
+    background: transparent;
+    padding: 0;
+    // margin-left: toPercentage(140, 25);
+    font-size: em(16);
+    position: relative;
+    z-index: 2;
+    svg {
+        width: 100%;
+        max-width: 15px;
+        min-width: 15px;
+        margin-top: 2px;
+    }
+    cursor: pointer;
+    .number {
+        position: absolute;
+        top: 1px;
+        right: -10px;
+        color: $cw1;
+        display: flex;
+        align-items: center;
+        font-size: em(11);
+        margin-left: 25%;
+        @include encode-sb;
+    }
+     :global {
+        .customNumber {
+            background: $cp1;
+            width: 17px;
+            height: 17px;
+            display: block;
+            border-radius: 50%;
+        }
+    }
+    .labeltext {
+        font-size: em(16);
+        @include encode-r;
+        text-align: left;
+        span {
+            &:first-child {
+                @include encode-b;
+            }
+        }
+    }
+    .breakline {
+        display: block;
+    }
+    .dot {
+        color: $cr1;
+    }
+}

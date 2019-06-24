@@ -1,0 +1,52 @@
+.supportingText {
+    @include wrapper;
+    @include mobile {
+        padding-top: toPercentage($wrapper-xs, 50);
+        padding-bottom: toPercentage($wrapper-xs, 50);
+    }
+    .title {
+        font-size: em(18);
+        line-height: em(24, 18);
+        color: $cp1;
+        margin-bottom: 15px;
+        @include encode-b;
+        @include mobile {
+            font-size: em(16);
+            line-height: em(24, 16);
+        }
+    }
+    .text {
+        font-size: em(12);
+        line-height: em(24, 12);
+        color: $cp1;
+        @include encode-m;
+    }
+    .truncateWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+        .wrapperIcon {
+            display: block;
+            width: 40px;
+            cursor: pointer;
+            .arrow {
+                width: 100%;
+                display: block;
+                transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                &.active {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .text {
+            width: calc(100% - 40px);
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+}

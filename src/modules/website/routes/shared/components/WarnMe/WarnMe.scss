@@ -1,0 +1,89 @@
+.WarnMe {
+    margin-top: 30px;
+    @include desktop-medium {
+        margin-top: 15px;
+    }
+    .title {
+        font-size: em(22);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        @include encode-r;
+        @include tablet {
+            text-align: center;
+        }
+    }
+    .subtitle {
+        font-size: em(10);
+        line-height: em(22, 14);
+        margin-bottom: 45px;
+        text-transform: uppercase;
+        @include encode-m;
+        @include desktop-medium {
+            margin-bottom: 20px;
+        }
+        @include tablet {
+            text-align: center;
+        }
+    }
+    .sucess {
+        font-size: em(14);
+        text-transform: uppercase;
+        line-height: em(22, 14);
+        @include encode-sb;
+        margin-bottom: 20px;
+        color: $cp1;
+    }
+    .form {
+        position: relative;
+        .nome {
+            margin-bottom: 45px;
+            @include desktop-medium {
+                margin-bottom: 25px;
+            }
+        }
+        .email {
+            @extend .nome;
+            margin-bottom: 65px;
+            @include desktop-medium {
+                margin-bottom: 40px;
+            }
+        }
+        .field {
+            outline: none;
+            text-transform: lowercase;
+            width: 100%;
+            padding: 8px 0;
+            background: #FFF;
+            border: 0;
+            border-bottom: 1px solid #000;
+            @include encode-r;
+            @include placeholder {
+                @include encode-r;
+            }
+            &.inavalid {
+                border-color: darkred;
+            }
+            @include placeholder {
+                text-transform: uppercase;
+            }
+        }
+        .button {
+            border: none;
+            background: $cp1;
+            color: $cw1;
+            cursor: pointer;
+            outline: none;
+            @include encode-m;
+            text-transform: uppercase;
+            width: 100%;
+            padding: 20px 0;
+        }
+        .error {
+            font-size: em(12);
+            color: $cr1;
+            margin-top: 10px;
+            display: block;
+            @include encode-sb;
+        }
+    }
+}

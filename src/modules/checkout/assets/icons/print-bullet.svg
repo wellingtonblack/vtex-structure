@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="print-bullet" transform="translate(-1068 -204)">
+    <rect id="Retângulo_544" data-name="Retângulo 544" width="24" height="24" transform="translate(1068 204)" fill="none"/>
+    <g id="printer" transform="translate(1069.993 206)">
+      <g id="Agrupar_2867" data-name="Agrupar 2867" transform="translate(0.007)">
+        <rect id="Retângulo_542" data-name="Retângulo 542" width="6.25" height="1.25" transform="translate(6.25 15)" fill="#fff"/>
+        <path id="Caminho_1424" data-name="Caminho 1424" d="M92.235,1.25h10v2.5h1.25V1.25A1.25,1.25,0,0,0,102.235,0h-10a1.251,1.251,0,0,0-1.25,1.25v2.5h1.25Z" transform="translate(-87.235)" fill="#fff"/>
+        <rect id="Retângulo_543" data-name="Retângulo 543" width="7.499" height="1.25" transform="translate(6.25 12.5)" fill="#fff"/>
+        <path id="Caminho_1425" data-name="Caminho 1425" d="M18.757,121.3H1.257a1.25,1.25,0,0,0-1.25,1.25v7.5a1.25,1.25,0,0,0,1.25,1.25h2.5v3.75a1.25,1.25,0,0,0,1.25,1.25h10a1.249,1.249,0,0,0,1.25-1.25V131.3h2.5a1.249,1.249,0,0,0,1.25-1.25v-7.5A1.25,1.25,0,0,0,18.757,121.3Zm-3.75,13.75h-10v-7.5h10v7.5Zm2.5-10a1.25,1.25,0,1,1,1.25-1.25A1.249,1.249,0,0,1,17.506,125.054Z" transform="translate(-0.007 -116.304)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

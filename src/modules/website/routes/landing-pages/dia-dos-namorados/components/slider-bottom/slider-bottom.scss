@@ -1,0 +1,70 @@
+.sliderBottom {
+    @include wrapper;
+    background: #ead3d7;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #ead3d7 1%, #dac1c4 39%, #a78586 65%, #967574 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #ead3d7 1%, #dac1c4 39%, #a78586 65%, #967574 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #ead3d7 1%, #dac1c4 39%, #a78586 65%, #967574 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ead3d7', endColorstr='#967574', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    padding: 86px 0 138px 0;
+    @include mobile {
+        padding: 60px 0 90px 0;
+    }
+    img {
+        max-width: 100%;
+    }
+    .wrapper {
+        .title {
+            margin-bottom: 43px;
+            font-size: 0;
+            .icon {
+                display: block;
+                width: 518px;
+                margin: auto;
+                @include mobile {
+                    width: auto;
+                }
+            }
+        }
+        .content {
+            width: toPercentage($wrapper-global, 1122);
+            @include mobile {
+                width: toPercentage($wrapper-xs, $wrapper-xs);
+            }
+            margin: auto;
+            .sliderDown {
+                 :global {
+                    .slick-prev,
+                    .slick-next {
+                        &:before {
+                            display: none!important;
+                        }
+                    }
+                    .slick-prev {
+                        // transform: rotate(180deg);
+                        left: -170px;
+                        svg {
+                            width: 50px;
+                        }
+                    }
+                    .slick-next {
+                        right: -170px;
+                        svg {
+                            width: 50px;
+                        }
+                    }
+                    .slick-slider {
+                        .slick-track {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
