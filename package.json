@@ -15,7 +15,7 @@
     "license": "ISC",
     "dependencies": {
         "es-cookie": "^1.2.0",
-        "gsap": "^2.1.0",
+        "gsap": "^3.6.0",
         "guid-typescript": "^1.0.9",
         "react-scrollmagic": "^2.1.0",
         "react-slick": "^0.23.2",
